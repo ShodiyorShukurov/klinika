@@ -1,22 +1,15 @@
-import Header from './components/Header'
-import About from './components/About'
-import ContactSection from './components/ContactSection'
-import Testimonials from './components/Testimonials'
-import Services from './components/Services'
-import HeroCarousel from './components/HeroCarousel'
-import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './page/HomePage'
+import ServicePage from './page/ServicePage'
+import ServiceDetails from './page/ServiceDetails'
 
 const App = () => {
 	return (
-		<>
-			<Header />
-      <HeroCarousel />
-			<About />
-      <Services />
-			<ContactSection />
-			<Testimonials />
-      <Footer />
-		</>
+		<Routes>
+			<Route path='/' element={<HomePage />} />
+			<Route path='/services' element={<ServicePage />} />
+			<Route path="/services/:slug" element={<ServiceDetails />} />
+		</Routes>
 	)
 }
 
