@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from 'lucide-react'
+import { Instagram, Youtube } from 'lucide-react'
 import React from 'react'
 
 // type NewsItem = {
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
 							<img
 								src='/footer-logo.webp'
 								alt='Labostica Logo'
-								className='w-50 h-[75px] object-contain'
+								className='w-50 object-contain'
 							/>
 
 							<p className='mt-4 text-[16px] font-medium text-slate-200 max-w-[500px]'>
@@ -50,15 +50,15 @@ const Footer: React.FC = () => {
 
 							<div className='mt-6 flex items-center gap-3'>
 								<a
-									href='#'
+									href='https://www.youtube.com/@endoloruz'
 									aria-label='Facebook'
 									className='w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#041926] hover:scale-105 transition'
 								>
-									<Facebook className='w-5 h-5' />
+									<Youtube className='w-5 h-5' />
 								</a>
 
 								<a
-									href='#'
+									href='https://www.instagram.com/shavkat_lor'
 									aria-label='Instagram'
 									className='w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#041926] hover:scale-105 transition'
 								>

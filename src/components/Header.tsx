@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Menu, X } from 'lucide-react'
+import { Instagram,  MapPin, Menu, X, Youtube } from 'lucide-react'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -18,14 +18,14 @@ const Header: React.FC = () => {
 						<div className='flex items-center gap-4'>
 							{/* Social icons (simple SVGs) */}
 							<a
-								href='#'
+								href='https://www.youtube.com/@endoloruz'
 								aria-label='github'
 								className='text-white hover:text-[#0c5adb] transition-all duration-300'
 							>
-								<Facebook size={20} />
+								<Youtube size={20} />
 							</a>
 							<a
-								href='#'
+								href='https://www.instagram.com/shavkat_lor'
 								aria-label='github'
 								className='text-white hover:text-[#0c5adb] transition-all duration-300'
 							>
@@ -34,16 +34,10 @@ const Header: React.FC = () => {
 						</div>
 
 						<div className='flex items-center gap-6'>
-							<div className='flex items-center gap-3'>
-								<Mail size={16} className='text-[#0c5adb]' />
-								<span className='hidden sm:inline text-[16px] font-medium'>
-									info@peacefulqode.com
-								</span>
-							</div>
 							<div className='flex items-center gap-2'>
 								<MapPin size={16} className='text-[#0c5adb]' />
 								<span className='hidden sm:inline text-[16px] font-medium'>
-									128 Near Golden Mall London Eye
+								Chilonzor 17-kvartal, Bunyodkor shoh ko'chasi 33/1
 								</span>
 							</div>
 						</div>
@@ -58,7 +52,7 @@ const Header: React.FC = () => {
 						{/* Logo */}
 						<div className='flex items-center gap-4'>
 							<div className='flex items-center'>
-								<img src='/logo.webp' alt='logo' width={172} height={65} />
+								<img src='/logo.png' alt='logo' width={80} height={65} />
 							</div>
 						</div>
 
@@ -73,11 +67,6 @@ const Header: React.FC = () => {
 								<li>
 									<NavLink to='/services' className='hover:text-blue-600'>
 										Services
-									</NavLink>
-								</li>
-								<li>
-									<NavLink to='/blog' className='hover:text-blue-600'>
-										Blog
 									</NavLink>
 								</li>
 								<li>
@@ -110,7 +99,7 @@ const Header: React.FC = () => {
 									</svg>
 								</div>
 								<div className='text-[16px] font-medium'>
-									<div className='text-[#041424]'>+1 800-001-658</div>
+									<a href="tel:+998977308685" className='text-[#041424]'>+998 97 730 86 85</a>
 								</div>
 							</div>
 
