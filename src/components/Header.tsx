@@ -51,9 +51,9 @@ const Header: React.FC = () => {
 					<div className='flex items-center justify-between py-4'>
 						{/* Logo */}
 					
-							<Link to='/' className='flex items-center'>
+							<a href='/' className='flex items-center'>
 								<img src='/logo.png' alt='logo' width={80} height={65} />
-							</Link>
+							</a>
 					
 
 						{/* Nav links - Desktop */}
