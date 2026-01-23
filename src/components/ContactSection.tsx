@@ -57,9 +57,9 @@ const ContactSection: React.FC = () => {
 					</div>
 
 					{/* RIGHT: Form card + Stats card */}
-					<div className='order-2 lg:order-2 flex flex-col justify-between h-full'>
+					<div className='order-2 lg:order-2 flex flex-col justify-between h-full gap-3'>
 						{/* Form card */}
-						<div className='bg-white rounded-[10px] p-6 sm:p-8 mb-6 lg:mb-0'>
+						<div className='bg-white rounded-[10px] p-6 sm:p-8 mb-6 lg:mb-0 h-full'>
 							<h4 className='text-[32px] font-bold text-[#041424]'>
 								Our Team Will Respond
 							</h4>
@@ -96,65 +96,6 @@ const ContactSection: React.FC = () => {
 									/>
 								</div>
 
-								<div className='mb-6.5'>
-									<label className='block text-[16px] font-medium text-[#041424] mb-2'>
-										Type of Appointment *
-									</label>
-									<select
-										name='appointment'
-										value={form.appointment}
-										onChange={onChange}
-										className='w-full bg-[#F1F5FD] rounded-full px-4 py-3 text-[16px] focus:outline-none'
-									>
-										<option>Consultation</option>
-										<option>Treatment</option>
-										<option>Follow-up</option>
-									</select>
-								</div>
-
-								<div className='mb-6.5'>
-									<label className='block text-[16px] font-medium text-[#041424] mb-2'>
-										Preferred Dentist *
-									</label>
-									<select
-										name='dentist'
-										value={form.dentist}
-										onChange={onChange}
-										className='w-full bg-[#F1F5FD] rounded-full px-4 py-3 text-[16px] focus:outline-none'
-									>
-										<option>Dr. David Brown</option>
-										<option>Dr. Sarah Lee</option>
-										<option>Dr. Michael Smith</option>
-									</select>
-								</div>
-
-								<div className='mb-6.5'>
-									<label className='block text-[16px] font-medium text-[#041424] mb-2'>
-										Preferred Date *
-									</label>
-									<input
-										name='date'
-										value={form.date}
-										onChange={onChange}
-										type='date'
-										required
-										className='w-full bg-[#F1F5FD] rounded-full px-4 py-3 text-[16px] focus:outline-none'
-									/>
-								</div>
-
-								<div className='mb-6.5'>
-									<label className='block text-[16px] font-medium text-[#041424] mb-2'>
-										Preferred Time *
-									</label>
-									<input
-										name='time'
-										value={form.time}
-										onChange={onChange}
-										type='time'
-										required
-										className='w-full bg-gray-100 rounded-full px-4 py-3 text-sm focus:outline-none'
-									/>
-								</div>
 
 								<div className='sm:col-span-2 mt-2'>
 									<button

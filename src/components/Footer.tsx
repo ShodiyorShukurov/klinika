@@ -1,5 +1,6 @@
 import { Instagram, Youtube } from 'lucide-react'
 import React from 'react'
+import GoogleMapReact from 'google-map-react'
 
 // type NewsItem = {
 // 	id: number
@@ -28,7 +29,25 @@ import React from 'react'
 // 	},
 // ]
 
+const MapMarker = ({ lat, lng }: { lat: number; lng: number }) => (
+	<div
+		className='text-red-600 text-3xl'
+		title={`Koordinatalar: ${lat}, ${lng}`}
+	>
+		<svg width='32' height='40' viewBox='0 0 32 40' fill='none'>
+			<circle cx='16' cy='16' r='9' fill='#D12C2C' />
+		</svg>
+	</div>
+)
+
 const Footer: React.FC = () => {
+
+		const tashkentCoordinates = {
+		lat: 41.269801,
+		lng: 69.201026,
+	}
+
+
 	return (
 		<footer className='bg-[#041926] text-white'>
 			<div className='container'>
@@ -142,30 +161,25 @@ const Footer: React.FC = () => {
 						</div>
 
 						{/* Recent News */}
-						{/* <div>
-            <h4 className="text-lg font-semibold">Recent News</h4>
-            <div className="mt-4 space-y-4">
-              {NEWS.map((n) => (
-                <a key={n.id} href={n.href} className="flex items-start gap-3">
-                  <img
-                    src={n.image}
-                    alt={n.title}
-                    className="w-16 h-16 rounded-md object-cover flex-shrink-0"
-                  />
-                  <div>
-                    <h5 className="text-sm font-medium text-white">{n.title}</h5>
-                    <div className="mt-2 text-xs text-slate-300 flex items-center gap-2">
-                      <svg className="w-4 h-4 text-slate-300" viewBox="0 0 24 24" fill="none">
-                        <path d="M7 10V7a5 5 0 0110 0v3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.2" />
-                      </svg>
-                      <span>{n.date}</span>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div> */}
+						<div>
+					<h3 className='text-white font-semibold mb-4'>
+						Our Location
+					</h3>
+					<div className='w-full h-40 bg-gray-700 rounded-md overflow-hidden'>
+						<GoogleMapReact
+							bootstrapURLKeys={{
+								key: 'AIzaSyB01Ad7b4Dt3BsrUL13vLMZoRjRsSyGIeo',
+							}}
+							defaultCenter={tashkentCoordinates}
+							defaultZoom={13}
+						>
+							<MapMarker
+								lat={tashkentCoordinates.lat}
+								lng={tashkentCoordinates.lng}
+							/>
+						</GoogleMapReact>
+					</div>
+				</div>
 					</div>
 				</div>
 			</div>

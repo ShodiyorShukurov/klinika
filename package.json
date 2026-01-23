@@ -12,6 +12,8 @@
   "dependencies": {
     "@fortawesome/react-fontawesome": "^3.1.1",
     "@tailwindcss/vite": "^4.1.18",
+    "@types/google-map-react": "^2.1.10",
+    "google-map-react": "^2.2.5",
     "lucide-react": "^0.561.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

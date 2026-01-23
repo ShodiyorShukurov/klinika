@@ -1,4 +1,4 @@
-import { Instagram,  MapPin, Menu, X, Youtube } from 'lucide-react'
+import { Instagram, Link, MapPin, Menu, X, Youtube } from 'lucide-react'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
 							<div className='flex items-center gap-2'>
 								<MapPin size={16} className='text-[#0c5adb]' />
 								<span className='hidden sm:inline text-[16px] font-medium'>
-								Chilonzor 17-kvartal, Bunyodkor shoh ko'chasi 33/1
+									Chilonzor 17-kvartal, Bunyodkor shoh ko'chasi 33/1
 								</span>
 							</div>
 						</div>
@@ -50,11 +50,11 @@ const Header: React.FC = () => {
 				<div className='container'>
 					<div className='flex items-center justify-between py-4'>
 						{/* Logo */}
-						<div className='flex items-center gap-4'>
-							<div className='flex items-center'>
+					
+							<Link to='/' className='flex items-center'>
 								<img src='/logo.png' alt='logo' width={80} height={65} />
-							</div>
-						</div>
+							</Link>
+					
 
 						{/* Nav links - Desktop */}
 						<nav className='hidden lg:flex flex-1 ml-10'>
@@ -64,6 +64,11 @@ const Header: React.FC = () => {
 										Home
 									</NavLink>
 								</li>
+								{/* <li>
+									<NavLink to='/contact' className='hover:text-blue-600'>
+										About Us
+									</NavLink>
+								</li> */}
 								<li>
 									<NavLink to='/services' className='hover:text-blue-600'>
 										Services
@@ -72,6 +77,11 @@ const Header: React.FC = () => {
 								<li>
 									<NavLink to='/contact' className='hover:text-blue-600'>
 										Contact Us
+									</NavLink>
+								</li>
+								<li>
+									<NavLink to='/' className='hover:text-blue-600'>
+										About Us
 									</NavLink>
 								</li>
 							</ul>
@@ -99,7 +109,9 @@ const Header: React.FC = () => {
 									</svg>
 								</div>
 								<div className='text-[16px] font-medium'>
-									<a href="tel:+998977308685" className='text-[#041424]'>+998 97 730 86 85</a>
+									<a href='tel:+998977308685' className='text-[#041424]'>
+										+998 97 730 86 85
+									</a>
 								</div>
 							</div>
 
