@@ -80,7 +80,7 @@ const Header: React.FC = () => {
 									</NavLink>
 								</li>
 								<li>
-									<NavLink to='/' className='hover:text-blue-600'>
+									<NavLink to='/about' className='hover:text-blue-600'>
 										About Us
 									</NavLink>
 								</li>
@@ -159,11 +159,11 @@ const Header: React.FC = () => {
 									</li>
 									<li>
 										<NavLink
-											to='/blog'
+											to='/about'
 											onClick={() => setIsMenuOpen(false)}
 											className='block py-2 px-4 hover:text-blue-600 hover:bg-gray-100 rounded'
 										>
-											Blog
+											About Us
 										</NavLink>
 									</li>
 									<li>
