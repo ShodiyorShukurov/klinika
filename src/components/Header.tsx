@@ -1,4 +1,4 @@
-import { Instagram, Link, MapPin, Menu, X, Youtube } from 'lucide-react'
+import { Instagram, MapPin, Menu, X, Youtube } from 'lucide-react'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
