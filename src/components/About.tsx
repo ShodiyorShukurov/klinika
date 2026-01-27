@@ -48,23 +48,7 @@ const About = () => {
 							</div>
 						</div>
 						{/* Circular badge overlapping images */}
-						<div
-							className='
-       absolute
-       left-1/2 top-1/2
-       -translate-x-1/2 -translate-y-1/2
-     
-       bg-blue-600
-       w-20 h-20 md:w-34 md:h-34
-       rounded-full flex items-center justify-center
-       transform
-			 p-6
-     '
-							aria-hidden='true'
-						>
-							{/* simple flask icon (SVG) */}
-							<img src='/about.png' alt='about icon' width={130} height={130} />
-						</div>
+``
 					</div>
 					{/* Right content */}
 		<div className='mt-10 lg:mt-0 lg:w-1/2'>
