@@ -50,11 +50,10 @@ const Header: React.FC = () => {
 				<div className='container'>
 					<div className='flex items-center justify-between py-4'>
 						{/* Logo */}
-					
-							<a href='/' className='flex items-center'>
-								<img src='/logo.png' alt='logo' width={80} height={65} />
-							</a>
-					
+
+						<a href='/' className='flex items-center'>
+							<img src='/logo.png' alt='logo' width={80} height={65} />
+						</a>
 
 						{/* Nav links - Desktop */}
 						<nav className='hidden lg:flex flex-1 ml-10'>
@@ -74,14 +73,14 @@ const Header: React.FC = () => {
 										Services
 									</NavLink>
 								</li>
+									<li>
+										<NavLink to='/about' className='hover:text-blue-600'>
+											About Us
+										</NavLink>
+									</li>
 								<li>
 									<NavLink to='/contact' className='hover:text-blue-600'>
 										Contact Us
-									</NavLink>
-								</li>
-								<li>
-									<NavLink to='/about' className='hover:text-blue-600'>
-										About Us
 									</NavLink>
 								</li>
 							</ul>

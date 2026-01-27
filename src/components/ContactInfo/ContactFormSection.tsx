@@ -20,18 +20,8 @@ const ContactFormSection: React.FC = () => {
 							className='rounded-full px-6 py-3 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
 						/>
 						<input
-							type='email'
-							placeholder='Your Email'
-							className='rounded-full px-6 py-3 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
-						/>
-						<input
 							type='text'
 							placeholder='Phone Number'
-							className='rounded-full px-6 py-3 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
-						/>
-						<input
-							type='text'
-							placeholder='Select Subject'
 							className='rounded-full px-6 py-3 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
 						/>
 					</div>
