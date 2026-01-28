@@ -1,11 +1,13 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 
 const Hero: React.FC = () => {
+	const { t } = useTranslation()
 	return (
 		<section
 			style={{
-				backgroundImage: 'url(/contact-bg.webp)',
+				backgroundImage: 'url(/about-img1.webp)',
 				backgroundSize: 'cover',
 				backgroundPosition: 'center',
 				minHeight: '350px',
@@ -36,7 +38,7 @@ const Hero: React.FC = () => {
 				}}
 			>
 				<h1 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '1rem' }}>
-					Contact Us
+					{t('contactPage.hero.title')}
 				</h1>
 				<div
 					style={{
@@ -47,9 +49,9 @@ const Hero: React.FC = () => {
 						gap: '0.5rem',
 					}}
 				>
-					<span>HOME</span>
+					<span>{t('contactPage.hero.breadcrumbHome')}</span>
 					<span style={{ fontWeight: 700 }}>&gt;</span>
-					<span>CONTACT US</span>
+					<span>{t('contactPage.hero.breadcrumbCurrent')}</span>
 				</div>
 			</div>
 		</section>

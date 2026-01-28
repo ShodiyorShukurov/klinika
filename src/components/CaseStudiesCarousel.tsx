@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import type { Swiper as SwiperType } from 'swiper'
 
 // @ts-expect-error Missing type definitions for 'swiper/css'
 import 'swiper/css'
@@ -16,28 +18,42 @@ const youtubeLinks = [
 ]
 
 const CaseStudiesCarousel: React.FC = () => {
+	const { t } = useTranslation()
+	const swiperRef = useRef<SwiperType | null>(null)
+
+	const stopAutoplay = () => {
+		swiperRef.current?.autoplay?.stop()
+	}
+
+	const startAutoplay = () => {
+		swiperRef.current?.autoplay?.start()
+	}
+
 	return (
 		<section className='w-full py-16 bg-[#0C5ADB] relative'>
 			<div className='container mx-auto'>
 				<div className='text-center mb-10'>
 					<span className='text-white text-lg font-medium uppercase tracking-wide mb-2 block'>
-						Case Studies
+						{t('caseStudies.pretitle')}
 					</span>
 					<h2 className='text-white text-4xl md:text-5xl font-bold leading-tight'>
-						Transforming Ideas Into Scientific Achievements
+						{t('caseStudies.title')}
 					</h2>
 				</div>
 
 				<Swiper
 					modules={[Autoplay]}
+					onSwiper={swiper => {
+						swiperRef.current = swiper
+					}}
 					spaceBetween={72}
 					slidesPerView={4} // Auto o'rniga aniq raqam
 					centeredSlides={false}
 					loop={true}
 					autoplay={{
 						delay: 1, // 0 o'rniga 1
-						disableOnInteraction: false,
-						pauseOnMouseEnter: false,
+						disableOnInteraction: true,
+						pauseOnMouseEnter: true,
 					}}
 					speed={2500} // Biroz sekinroq
 					allowTouchMove={false}
@@ -68,6 +84,12 @@ const CaseStudiesCarousel: React.FC = () => {
 					{youtubeLinks.map((link, index) => (
 						<SwiperSlide key={index}>
 							{/* <div className='relative  group '> */}
+							<div
+								onMouseEnter={stopAutoplay}
+								onMouseLeave={startAutoplay}
+								onFocus={stopAutoplay}
+								className='outline-none'
+							>
 								<iframe
 									width='250'
 									height='250'
@@ -77,6 +99,7 @@ const CaseStudiesCarousel: React.FC = () => {
 									allowFullScreen
 									className='rounded-lg shadow-lg block'
 								></iframe>
+							</div>
 							{/* </div> */}
 						</SwiperSlide>
 					))}

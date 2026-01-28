@@ -1,18 +1,20 @@
+import { useTranslation } from 'react-i18next'
+
 const LEFT_POINTS = [
 	{
-		title: 'Advanced Analytics',
-		desc: 'Actionable insights that help you optimize lab performance and outcomes.',
+		titleKey: 'labProduct.left.1.title',
+		descKey: 'labProduct.left.1.desc',
 	},
 	{
-		title: 'Marketing Automation',
-		desc: 'Smarter workflows that keep your outreach consistent and measurable.',
+		titleKey: 'labProduct.left.2.title',
+		descKey: 'labProduct.left.2.desc',
 	},
 ]
 
 const RIGHT_POINTS = [
 	{
-		title: 'Report Efficiency',
-		desc: 'Streamlined reporting that saves time without losing precision.',
+		titleKey: 'labProduct.right.1.title',
+		descKey: 'labProduct.right.1.desc',
 		icon: (
 			<svg viewBox='0 0 24 24' className='w-7 h-7' fill='none'>
 				<path
@@ -36,8 +38,8 @@ const RIGHT_POINTS = [
 		),
 	},
 	{
-		title: 'Complete Cases',
-		desc: 'From intake to delivery, every case is tracked and accountable.',
+		titleKey: 'labProduct.right.2.title',
+		descKey: 'labProduct.right.2.desc',
 		icon: (
 			<svg viewBox='0 0 24 24' className='w-7 h-7' fill='none'>
 				<path
@@ -56,8 +58,8 @@ const RIGHT_POINTS = [
 		),
 	},
 	{
-		title: 'Our Equipment',
-		desc: 'Modern instruments calibrated for consistent lab-grade accuracy.',
+		titleKey: 'labProduct.right.3.title',
+		descKey: 'labProduct.right.3.desc',
 		icon: (
 			<svg viewBox='0 0 24 24' className='w-7 h-7' fill='none'>
 				<path
@@ -79,32 +81,28 @@ const RIGHT_POINTS = [
 ]
 
 const LabProductSection = () => {
+	const { t } = useTranslation()
+
 	return (
 		<section className='py-16'>
 			<div className='container'>
 				<div className='grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr_1fr]'>
 					<div>
 						<p className='text-[16px] leading-6 text-[#0c5adb] font-medium tracking-[0.25em] uppercase'>
-							Better For You
+							{t('labProduct.pretitle')}
 						</p>
 						<h2 className='mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#041424] leading-tight'>
-							Experiment With Best Lab Product
+							{t('labProduct.title')}
 						</h2>
-						<p className='mt-5 text-[#6B7280] text-[16px] leading-7 max-w-xl'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-							congue, diam ut hendrerit elementum, dolor metus eleifend erat,
-							vitae scelerisque massa justo non dolor.
-						</p>
+						{/* <p className='mt-5 text-[#6B7280] text-[16px] leading-7 max-w-xl'>
+							{t('labProduct.description')}
+						</p> */}
 
 						<div className='mt-8 space-y-6'>
 							{LEFT_POINTS.map(point => (
-								<div key={point.title} className='flex gap-4'>
+								<div key={point.titleKey} className='flex gap-4'>
 									<div className='w-11 h-11 rounded-full bg-[#0c5adb] text-white flex items-center justify-center flex-shrink-0'>
-										<svg
-											viewBox='0 0 24 24'
-											className='w-6 h-6'
-											fill='none'
-										>
+										<svg viewBox='0 0 24 24' className='w-6 h-6' fill='none'>
 											<path
 												d='M20 6L9 17l-5-5'
 												stroke='currentColor'
@@ -116,10 +114,10 @@ const LabProductSection = () => {
 									</div>
 									<div>
 										<h3 className='text-[20px] font-semibold text-[#041424]'>
-											{point.title}
+											{t(point.titleKey)}
 										</h3>
 										<p className='mt-2 text-[#6B7280] text-[15px] leading-6'>
-											{point.desc}
+											{t(point.descKey)}
 										</p>
 									</div>
 								</div>
@@ -131,7 +129,7 @@ const LabProductSection = () => {
 						<div className='bg-white rounded-2xl overflow-hidden'>
 							<img
 								src='/for-you.webp'
-								alt='Lab researchers working'
+								alt={t('labProduct.imageAlt')}
 								className='w-full h-[420px] object-cover'
 							/>
 						</div>
@@ -140,9 +138,11 @@ const LabProductSection = () => {
 					<div className='space-y-8'>
 						{RIGHT_POINTS.map((point, index) => (
 							<div
-								key={point.title}
+								key={point.titleKey}
 								className={`flex gap-4 ${
-									index < RIGHT_POINTS.length - 1 ? 'border-b border-[#E5E7EB] pb-8' : ''
+									index < RIGHT_POINTS.length - 1
+										? 'border-b border-[#E5E7EB] pb-8'
+										: ''
 								}`}
 							>
 								<div className='w-16 h-16 rounded-full bg-[#EEF3FF] text-[#0c5adb] flex items-center justify-center flex-shrink-0'>
@@ -150,10 +150,10 @@ const LabProductSection = () => {
 								</div>
 								<div>
 									<h3 className='text-[22px] font-semibold text-[#041424]'>
-										{point.title}
+										{t(point.titleKey)}
 									</h3>
 									<p className='mt-2 text-[#6B7280] text-[15px] leading-6 max-w-sm'>
-										{point.desc}
+										{t(point.descKey)}
 									</p>
 								</div>
 							</div>

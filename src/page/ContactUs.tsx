@@ -1,5 +1,5 @@
 import Hero from '../components/Contact/Hero'
-import ContactFormSection from '../components/ContactInfo/ContactFormSection'
+// import ContactFormSection from '../components/ContactInfo/ContactFormSection'
 import ContactInfoCards from '../components/ContactInfo/ContactInfoCards'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -27,7 +27,6 @@ const ContactUs = () => {
 			<Header />
 			<Hero />
 			<ContactInfoCards />
-			<ContactFormSection />
 
 			<div className='w-full h-[600px] bg-gray-700 rounded-md overflow-hidden'>
 				<GoogleMapReact
