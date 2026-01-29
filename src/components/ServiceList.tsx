@@ -14,7 +14,7 @@ const ServiceCard: React.FC<{
 	ctaLabel: string
 }> = ({ service, onUseService, ctaLabel }) => {
 	return (
-		<article className='group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100'>
+		<article className='group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100' onClick={()=>onUseService(service)}>
 			<div className='relative bg-gradient-to-br from-slate-50 to-white'>
 				<div className='absolute top-3 left-3 w-10 h-10 rounded-full bg-[#0c5adb] text-white flex items-center justify-center font-bold text-[16px] shadow'>
 					{String(service.id).padStart(2, '0')}

@@ -11,10 +11,10 @@ type Service = {
 const Services: React.FC = () => {
 	const { t } = useTranslation()
 	const operations = t('operations.list', { returnObjects: true }) as string[]
-	const services: Service[] = operations.slice(0, 8).map((title, idx) => ({
+	const services: Service[] = operations.slice(8, 16).map((title, idx) => ({
 		id: idx + 1,
 		title,
-		image: `/services/${idx + 1}.jpg`,
+		image: `/services/${idx + 8}.jpg`,
 	}))
 
 	return (
