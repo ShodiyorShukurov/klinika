@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Toast from './Toast'
 
 const About = () => {
 	const { t } = useTranslation()
 	const items = t('aboutSection.items', { returnObjects: true }) as string[]
 	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [toastOpen, setToastOpen] = useState(false)
+	const [isSubmitting, setIsSubmitting] = useState(false)
+	const [form, setForm] = useState({ name: '', phone: '' })
 
 	const images = [
 		'/about-img1.webp',
@@ -21,6 +25,57 @@ const About = () => {
 		window.addEventListener('keydown', onKeyDown)
 		return () => window.removeEventListener('keydown', onKeyDown)
 	}, [isModalOpen])
+
+	useEffect(() => {
+		if (!toastOpen) return
+		const timer = setTimeout(() => setToastOpen(false), 2500)
+		return () => clearTimeout(timer)
+	}, [toastOpen])
+
+	const onChange = (
+		e: React.ChangeEvent<HTMLInputElement>
+	) => setForm(s => ({ ...s, [e.target.name]: e.target.value }))
+
+	const onPhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const digitsOnly = e.target.value.replace(/\D/g, '')
+		setForm(s => ({ ...s, phone: digitsOnly }))
+	}
+
+	const onSubmit = async (e: React.FormEvent) => {
+		e.preventDefault()
+		const botToken = import.meta.env.VITE_BOT_TOKEN as string | undefined
+		const chatId = import.meta.env.VITE_CHAT_ID as string | undefined
+		if (!botToken || !chatId) {
+			console.error('Missing Telegram bot token or chat id')
+			return
+		}
+
+		const text = `About modal\nIsm: ${form.name}\nTelefon: ${form.phone}`
+		setIsSubmitting(true)
+		try {
+			const res = await fetch(
+				`https://api.telegram.org/bot${botToken}/sendMessage`,
+				{
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						chat_id: chatId,
+						text,
+					}),
+				}
+			)
+			if (!res.ok) {
+				throw new Error('Telegram request failed')
+			}
+			setForm({ name: '', phone: '' })
+			setIsModalOpen(false)
+			setToastOpen(true)
+		} catch (err) {
+			console.error(err)
+		} finally {
+			setIsSubmitting(false)
+		}
+	}
 
 	return (
 		<section className='py-12'>
@@ -173,13 +228,17 @@ const About = () => {
 							</button>
 						</div>
 
-						<form className='mt-6 space-y-4'>
+						<form onSubmit={onSubmit} className='mt-6 space-y-4'>
 							<div>
 								<label className='text-sm font-medium text-[#041424]'>
 									{t('aboutSection.modal.nameLabel')}
 								</label>
 								<input
 									type='text'
+									name='name'
+									value={form.name}
+									onChange={onChange}
+									required
 									placeholder={t('aboutSection.modal.namePlaceholder')}
 									className='mt-2 w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0c5adb]'
 								/>
@@ -190,22 +249,35 @@ const About = () => {
 								</label>
 								<input
 									type='tel'
+									name='phone'
+									value={form.phone}
+									onChange={onPhoneChange}
+									required
+									inputMode='numeric'
+									pattern='[0-9]*'
 									placeholder={t('aboutSection.modal.phonePlaceholder')}
 									className='mt-2 w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0c5adb]'
 								/>
 							</div>
 
 							<button
-								type='button'
-								onClick={() => setIsModalOpen(false)}
+								type='submit'
+								disabled={isSubmitting}
 								className='w-full rounded-full bg-[#0c5adb] hover:bg-[#094bbd] text-white py-3 text-sm font-semibold uppercase'
 							>
-								{t('aboutSection.modal.submit')}
+								{isSubmitting
+									? t('aboutSection.modal.sending')
+									: t('aboutSection.modal.submit')}
 							</button>
 						</form>
 					</div>
 				</div>
 			)}
+			<Toast
+				open={toastOpen}
+				message={t('aboutSection.modal.toast')}
+				onClose={() => setToastOpen(false)}
+			/>
 		</section>
 	)
 }

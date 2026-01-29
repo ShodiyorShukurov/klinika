@@ -32,7 +32,7 @@
 	},
 	"aboutSection": {
 		"pretitle": "BIZ HAQIMIZDA",
-		"title": "Toshkentdagi LOR markazi РІР‚вЂќ 24/7 konsultatsiya",
+		"title": "Toshkentdagi LOR markazi 24/7 konsultatsiya",
 		"description": "Otorinolaringolog (LOR) quloq, burun va tomoq kasalliklarini davolaydi. Asoratlar va surunkali shaklga o'tish xavfini kamaytirish uchun o'z vaqtida tashxis va davolash muhim. Siz qulay vaqtda РІР‚вЂќ navbatsiz, yo'llanmasiz va ortiqcha hujjatlarsiz konsultatsiya olishingiz mumkin.",
 		"items": [
 			"Burun shilliq qavatining qurishi, burundan nafas olish qiyinlashishi",
@@ -52,6 +52,8 @@
 			"phoneLabel": "Telefon raqam",
 			"phonePlaceholder": "Telefon raqamingizni kiriting",
 			"submit": "Yuborish",
+			"sending": "Yuborilmoqda...",
+			"toast": "Yuborildi",
 			"close": "Yopish"
 		}
 	},
@@ -124,7 +126,7 @@
 	},
 	"contactSection": {
 		"pretitle": "BIZ BILAN BOG'LANING",
-		"title": "Bog'laning РІР‚вЂќ bepul baho oling!",
+		"title": "Bog'laning bepul baho oling!",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor. Cras in pulvinar augue.",
 		"imageAlt": "Laboratoriya ishlari",
 		"form": {
@@ -133,8 +135,12 @@
 			"namePlaceholder": "Masalan, John Doe",
 			"phoneLabel": "Telefon raqam *",
 			"phonePlaceholder": "Telefon raqamingizni kiriting",
+			"messageLabel": "Xabar *",
+			"messagePlaceholder": "Xabaringizni yozing",
 			"submit": "XABAR YUBORISH",
-			"alert": "Forma yuborildi (demo). Konsolni tekshiring."
+			"sending": "Yuborilmoqda...",
+			"alert": "Forma yuborildi (demo). Konsolni tekshiring.",
+			"toast": "Yuborildi"
 		},
 		"stats": {
 			"title": "Yaxshi kelajak uchun ilg'or laboratoriya xizmatlari",
@@ -169,12 +175,35 @@
 			"breadcrumbCurrent": "Bog'lanish"
 		}
 	},
+	"contactFormSection": {
+		"pretitle": "Takliflarimiz",
+		"title": "So'rov yuborish",
+		"namePlaceholder": "Ismingiz",
+		"phonePlaceholder": "Telefon raqamingiz",
+		"messagePlaceholder": "Xabaringiz",
+		"submit": "YUBORISH",
+		"sending": "Yuborilmoqda...",
+		"toast": "Yuborildi",
+		"imageAlt": "Bog'lanish formasi rasmi"
+	},
 	"operations": {
 		"pretitle": "Operatsiyalar nomi",
 		"title": "Operatsiyalar ro'yxati",
 		"description": "Operatsiya va protseduralar to'liq ro'yxati.",
 		"cta": "Batafsil",
 		"ctaAll": "Barcha xizmatlar",
+		"useService": "Xizmatdan foydalanish",
+		"modal": {
+			"title": "Xizmatdan foydalanish",
+			"nameLabel": "Ism",
+			"namePlaceholder": "Ismingizni kiriting",
+			"phoneLabel": "Telefon raqam",
+			"phonePlaceholder": "Telefon raqamingizni kiriting",
+			"submit": "Yuborish",
+			"sending": "Yuborilmoqda...",
+			"toast": "Yuborildi",
+			"close": "Yopish"
+		},
 		"imagePlaceholder": "Rasm (keyin qo'yiladi)",
 		"list": [
 			"Adenotomiya (shayver usulida, bolalar)",

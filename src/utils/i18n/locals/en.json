@@ -52,6 +52,8 @@
 			"phoneLabel": "Phone number",
 			"phonePlaceholder": "Enter your phone number",
 			"submit": "Send",
+			"sending": "Sending...",
+			"toast": "Sent",
 			"close": "Close"
 		}
 	},
@@ -133,8 +135,12 @@
 			"namePlaceholder": "Ex. John Doe",
 			"phoneLabel": "Phone Number *",
 			"phonePlaceholder": "Enter Phone Number",
+			"messageLabel": "Message *",
+			"messagePlaceholder": "Type your message",
 			"submit": "SEND MESSAGE",
-			"alert": "Form submitted (demo). Check console."
+			"sending": "Sending...",
+			"alert": "Form submitted (demo). Check console.",
+			"toast": "Sent"
 		},
 		"stats": {
 			"title": "Pioneering Laboratory Services For A Better Future",
@@ -169,12 +175,35 @@
 			"breadcrumbCurrent": "Contact Us"
 		}
 	},
+	"contactFormSection": {
+		"pretitle": "What we offer",
+		"title": "Request A Quote",
+		"namePlaceholder": "Your Name",
+		"phonePlaceholder": "Phone Number",
+		"messagePlaceholder": "Your Message",
+		"submit": "SEND MESSAGE",
+		"sending": "Sending...",
+		"toast": "Sent",
+		"imageAlt": "Contact form image"
+	},
 	"operations": {
 		"pretitle": "Operation Names",
 		"title": "Operation List",
 		"description": "Full list of operations and procedures.",
 		"cta": "Learn More",
 		"ctaAll": "View All Services",
+		"useService": "Use this service",
+		"modal": {
+			"title": "Use this service",
+			"nameLabel": "Name",
+			"namePlaceholder": "Enter your name",
+			"phoneLabel": "Phone",
+			"phonePlaceholder": "Enter phone number",
+			"submit": "Send",
+			"sending": "Sending...",
+			"toast": "Sent",
+			"close": "Close"
+		},
 		"imagePlaceholder": "Image placeholder",
 		"list": [
 			"Adenotomy (shaver technique, children)",

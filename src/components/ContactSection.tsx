@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Toast from './Toast'
 
 type FormState = {
 	name: string
 	phone: string
-	appointment: string
-	dentist: string
-	date: string
-	time: string
+	message: string
 }
 
 const ContactSection: React.FC = () => {
@@ -15,24 +13,63 @@ const ContactSection: React.FC = () => {
 	const [form, setForm] = useState<FormState>({
 		name: '',
 		phone: '',
-		appointment: 'Consultation',
-		dentist: 'Dr. David Brown',
-		date: '',
-		time: '',
+		message: '',
 	})
+	const [toastOpen, setToastOpen] = useState(false)
+	const [isSubmitting, setIsSubmitting] = useState(false)
+
+	useEffect(() => {
+		if (!toastOpen) return
+		const timer = setTimeout(() => setToastOpen(false), 2500)
+		return () => clearTimeout(timer)
+	}, [toastOpen])
 
 	const onChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => setForm(s => ({ ...s, [e.target.name]: e.target.value }))
 
-	const onSubmit = (e: React.FormEvent) => {
+	const onPhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const digitsOnly = e.target.value.replace(/\D/g, '')
+		setForm(s => ({ ...s, phone: digitsOnly }))
+	}
+
+	const onSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
-		// Hozircha demo: console.log. Backend bo'lsa shu yerda fetch/axios chaqirasiz.
-		console.log('Form submitted', form)
-		alert(t('contactSection.form.alert'))
+		const botToken = import.meta.env.VITE_BOT_TOKEN as string | undefined
+		const chatId = import.meta.env.VITE_CHAT_ID as string | undefined
+		if (!botToken || !chatId) {
+			console.error('Missing Telegram bot token or chat id')
+			return
+		}
+
+		const text = `Ism: ${form.name}\nTelefon: ${form.phone}\nXabar: ${form.message}`
+		setIsSubmitting(true)
+		try {
+			const res = await fetch(
+				`https://api.telegram.org/bot${botToken}/sendMessage`,
+				{
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						chat_id: chatId,
+						text,
+					}),
+				}
+			)
+			if (!res.ok) {
+				throw new Error('Telegram request failed')
+			}
+			setForm({ name: '', phone: '', message: '' })
+			setToastOpen(true)
+		} catch (err) {
+			console.error(err)
+		} finally {
+			setIsSubmitting(false)
+		}
 	}
 
 	return (
+	<>
 		<section className='py-12 bg-[#F1F5FD]'>
 			<div className='container'>
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-start'>
@@ -91,20 +128,38 @@ const ContactSection: React.FC = () => {
 									<input
 										name='phone'
 										value={form.phone}
-										onChange={onChange}
+										onChange={onPhoneChange}
 										required
+										inputMode='numeric'
+										pattern='[0-9]*'
 										placeholder={t('contactSection.form.phonePlaceholder')}
 										className='w-full bg-[#F1F5FD] rounded-full px-4 py-3 text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-200'
 									/>
 								</div>
 
+								<div className='sm:col-span-2 mb-6.5'>
+									<label className='block text-[16px] font-medium text-[#041424] mb-2'>
+										{t('contactSection.form.messageLabel')}
+									</label>
+									<textarea
+										name='message'
+										value={form.message}
+										onChange={onChange}
+										required
+										placeholder={t('contactSection.form.messagePlaceholder')}
+										className='w-full bg-[#F1F5FD] rounded-2xl px-4 py-3 text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-200 min-h-[120px] resize-none'
+									/>
+								</div>
 
 								<div className='sm:col-span-2 mt-2'>
 									<button
 										type='submit'
+										disabled={isSubmitting}
 										className='inline-flex items-center gap-3 bg-[#0c5adb] hover:bg-[#094bbd] text-white px-6.5 py-3 rounded-full text-[16px] font-medium uppercase'
 									>
-										{t('contactSection.form.submit')}
+										{isSubmitting
+											? t('contactSection.form.sending')
+											: t('contactSection.form.submit')}
 										<svg
 											className='w-4 h-4'
 											fill='none'
@@ -152,6 +207,12 @@ const ContactSection: React.FC = () => {
 				</div>
 			</div>
 		</section>
+		<Toast
+			open={toastOpen}
+			message={t('contactSection.form.toast')}
+			onClose={() => setToastOpen(false)}
+		/>
+	</>
 	)
 }
 

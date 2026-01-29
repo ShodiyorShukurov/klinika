@@ -52,6 +52,8 @@
 			"phoneLabel": "Номер телефона",
 			"phonePlaceholder": "Введите ваш номер телефона",
 			"submit": "Отправить",
+			"sending": "Отправка...",
+			"toast": "Отправлено",
 			"close": "Закрыть"
 		}
 	},
@@ -133,8 +135,12 @@
 			"namePlaceholder": "Напр. John Doe",
 			"phoneLabel": "Номер телефона *",
 			"phonePlaceholder": "Введите номер телефона",
+			"messageLabel": "Сообщение *",
+			"messagePlaceholder": "Напишите сообщение",
 			"submit": "ОТПРАВИТЬ",
-			"alert": "Форма отправлена (демо). Проверьте консоль."
+			"sending": "Отправка...",
+			"alert": "Форма отправлена (демо). Проверьте консоль.",
+			"toast": "Отправлено"
 		},
 		"stats": {
 			"title": "Передовые лабораторные услуги для лучшего будущего",
@@ -169,12 +175,35 @@
 			"breadcrumbCurrent": "Контакты"
 		}
 	},
+	"contactFormSection": {
+		"pretitle": "Наши услуги",
+		"title": "Оставить заявку",
+		"namePlaceholder": "Ваше имя",
+		"phonePlaceholder": "Номер телефона",
+		"messagePlaceholder": "Ваше сообщение",
+		"submit": "ОТПРАВИТЬ",
+		"sending": "Отправка...",
+		"toast": "Отправлено",
+		"imageAlt": "Изображение формы"
+	},
 	"operations": {
 		"pretitle": "Название операций",
 		"title": "Название операций",
 		"description": "Полный список операций и процедур.",
 		"cta": "Подробнее",
 		"ctaAll": "Все услуги",
+		"useService": "Записаться",
+		"modal": {
+			"title": "Записаться на услугу",
+			"nameLabel": "Имя",
+			"namePlaceholder": "Введите имя",
+			"phoneLabel": "Телефон",
+			"phonePlaceholder": "Введите номер телефона",
+			"submit": "Отправить",
+			"sending": "Отправка...",
+			"toast": "Отправлено",
+			"close": "Закрыть"
+		},
 		"imagePlaceholder1": "Изображение (добавим позже)",
 		"list": [
 			"Аденотомия Шейверная (дети)",
