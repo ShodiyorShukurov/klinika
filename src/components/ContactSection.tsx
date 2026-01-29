@@ -53,7 +53,7 @@ const ContactSection: React.FC = () => {
 								src='/contact.webp'
 								alt={t('contactSection.imageAlt')}
 								className='w-full rounded-xl shadow-sm object-cover'
-								// style={{ height: 420 }}
+								style={{ height: 420 }}
 							/>
 						</div>
 					</div>

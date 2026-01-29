@@ -1,167 +1,214 @@
 {
-  "header": {
-    "address": "Chilonzor 17-kvartal, Bunyodkor shoh ko'chasi 33/1",
-    "nav": {
-      "home": "Bosh sahifa",
-      "services": "Xizmatlar",
-      "about": "Biz haqimizda",
-      "contact": "Bog'lanish"
-    }
-  },
-  "hero": {
-    "slides": {
-      "1": {
-        "pretitle": "TADQIQOT VA TEXNOLOGIYA",
-        "title": "Global taraqqiyot uchun ilmiy yetakchilik",
-        "description": "Biz sog'liqni saqlash, atrof-muhit va sanoat kelajagini shakllantiradigan ilmiy kashfiyotlar, mukammallik va texnologik yutuqlarga sodiqmiz.",
-        "cta": "TADQIQOTLARNI KO'RISH"
-      },
-      "2": {
-        "pretitle": "INNOVATSIYA",
-        "title": "Ilmiy izlanishlarning kelajagini boshlab beramiz",
-        "description": "Dunyo miqyosidagi jamoalar bilan hamkorlik qilib, kashfiyotlarni tezlashtiramiz va keng ko'lamda ishonchli natijalar taqdim etamiz.",
-        "cta": "XIZMATLARIMIZ"
-      },
-      "3": {
-        "pretitle": "KASHFIYOT",
-        "title": "G'oyalarni amaliy yechimlarga aylantiramiz",
-        "description": "Kontsepsiyadan tasdiqqacha — sizning tadqiqot yo'lingizni mustahkam jarayonlar va ekspert hamkorliklari bilan qo'llab-quvvatlaymiz.",
-        "cta": "BOG'LANISH"
-      }
-    }
-  },
-  "aboutSection": {
-    "pretitle": "BIZ HAQIMIZDA",
-    "title": "Toshkentdagi LOR markazi — 24/7 konsultatsiya",
-    "description": "Otorinolaringolog (LOR) quloq, burun va tomoq kasalliklarini davolaydi. Asoratlar va surunkali shaklga o'tish xavfini kamaytirish uchun o'z vaqtida tashxis va davolash muhim. Siz qulay vaqtda — navbatsiz, yo'llanmasiz va ortiqcha hujjatlarsiz konsultatsiya olishingiz mumkin.",
-    "items": [
-      "Burun shilliq qavatining qurishi, burundan nafas olish qiyinlashishi",
-      "Uzoq davom etadigan tumov va/yoki yo'tal",
-      "Tez-tez burundan qon ketishi",
-      "Og'izdan yoqimsiz hid kelishi",
-      "Tinch bo'lmagan uyqu, ertalab charchoq, bosh aylanish",
-      "Tez charchash",
-      "Xo'rlash"
-    ],
-    "cta": "Konsultatsiyaga yozilish"
-  },
-  "aboutPage": {
-    "hero": {
-      "title": "Biz haqimizda",
-      "breadcrumbHome": "Bosh sahifa",
-      "breadcrumbCurrent": "Biz haqimizda"
-    },
-    "content": {
-      "videoTitle": "Eshitish bilan muammo bormi? Endi buning yechimi oson! Endoskopik timpanoplastika!",
-      "title": "Lor sentr, Lor klinika, Yunusobod lor, Chilonzor lor, Lor med sentr, Lor 24/7 Toshkent, Lor operasiya, Lazer sentr",
-      "subtitle": "Yunusobod va Chilonzordagi LOR markazimiz dam olish kunlarisiz 24/7 ishlaydi",
-      "paragraph1": "Lor sentr, Lor klinika, Yunusobod lor, Chilonzor lor, Lor med sentr, Lor 24/7 Toshkent, Lor operasiya. Lazer yordamida operasiya, lazer sentr, lazer xirurgiya, quloqni lazer yordamida davolash, burunni lazer operasiyasi, endoskopik lazer yordamida septoplastika, endoskopik lazer vazatomiya.",
-      "paragraph2": "Otorinolaringolog (LOR) quloq, burun va tomoq (halqum, traxeya, farenks) kasalliklarini davolaydi. Asoratlar va surunkali shaklga o'tish xavfini kamaytirish uchun ularni o'z vaqtida tashxislash muhim. LOR 24/7 markazimizda siz tajribali shifokorga qulay vaqtda — navbatsiz, yo'llanmasiz va ortiqcha hujjatlarsiz murojaat qilishingiz mumkin.",
-      "sectionTitle": "Otorinolaringolog maslahati kimga kerak?",
-      "sectionLead": "LOR a'zolari bilan bog'liq muammolarni e'tiborsiz qoldirib bo'lmaydi. Shifokorga tashrifni kechiktirmang!",
-      "list": [
-        "Burun shilliq qavatining qurishi, burun nafasida qiyinchilik",
-        "Uzoq davom etadigan tumov yoki yo'tal",
-        "Tez-tez burundan qon ketishi",
-        "Og'izdan yoqimsiz hid",
-        "Uyqu buzilishi, ertalab charchoq, bosh aylanish",
-        "Tez charchash",
-        "Xo'rlash"
-      ],
-      "alertTitle": "Diqqat!",
-      "alertLead": "Quyidagi holatlarda LOR shifokorining shoshilinch maslahati zarur:",
-      "alertList": [
-        "Sinuslarda og'riq, yiringli oqim",
-        "Eshitish yoki hid bilishning buzilishi",
-        "Quloqlarda g'ayrioddiy oqim, shovqin, og'riq yoki bosim",
-        "Tomoq qizarishi, yutish qiyinligi, jag' osti limfa tugunlarining shishishi"
-      ]
-    }
-  },
-  "labProduct": {
-    "pretitle": "SIZ UCHUN YANADA YAXSHI",
-    "title": "Eng yaxshi laboratoriya mahsuloti bilan tajriba",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor.",
-    "imageAlt": "Laboratoriyada ishlayotgan tadqiqotchilar",
-    "left": {
-      "1": {
-        "title": "Ilg'or tahlillar",
-        "desc": "Laboratoriya samaradorligi va natijalarni yaxshilash uchun aniq tahliliy xulosalar."
-      },
-      "2": {
-        "title": "Marketing avtomatizatsiyasi",
-        "desc": "Maqsadli va o'lchab bo'ladigan samaralar uchun oqilona ish jarayonlari."
-      }
-    },
-    "right": {
-      "1": {
-        "title": "Hisobot samaradorligi",
-        "desc": "Aniqlikni yo'qotmasdan vaqtni tejaydigan soddalashtirilgan hisobotlar."
-      },
-      "2": {
-        "title": "To'liq kuzatuv",
-        "desc": "Qabuldan topshirishgacha bo'lgan har bir holat nazoratda bo'ladi."
-      },
-      "3": {
-        "title": "Uskunalarimiz",
-        "desc": "Barqaror aniqlik uchun sozlangan zamonaviy asbob-uskunalar."
-      }
-    }
-  },
-  "caseStudies": {
-    "pretitle": "Amaliy holatlar",
-    "title": "G'oyalarni ilmiy yutuqlarga aylantiramiz"
-  },
-  "contactSection": {
-    "pretitle": "BIZ BILAN BOG'LANING",
-    "title": "Bog'laning — bepul baho oling!",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor. Cras in pulvinar augue.",
-    "imageAlt": "Laboratoriya ishlari",
-    "form": {
-      "title": "Jamoamiz javob beradi",
-      "nameLabel": "Ismingiz *",
-      "namePlaceholder": "Masalan, John Doe",
-      "phoneLabel": "Telefon raqam *",
-      "phonePlaceholder": "Telefon raqamingizni kiriting",
-      "submit": "XABAR YUBORISH",
-      "alert": "Forma yuborildi (demo). Konsolni tekshiring."
-    },
-    "stats": {
-      "title": "Yaxshi kelajak uchun ilg'or laboratoriya xizmatlari",
-      "item1": "TADQIQOT JARAYONI",
-      "item2": "G'OYADAN KASHFIYOTGACHA"
-    }
-  },
-  "contactInfo": {
-    "location": {
-      "title": "Manzil",
-      "info": "Chilonzor 17-kvartal, Bunyodkor shoh ko'chasi 33/1",
-      "subInfo": "",
-      "linkText": "MANZILNI KO'RISH"
-    },
-    "phone": {
-      "title": "Telefon",
-      "info": "+998 97 730 86 85",
-      "subInfo": "",
-      "linkText": "QO'NG'IROQ QILISH"
-    },
-    "telegram": {
-      "title": "Telegram",
-      "info": "+998 97 730 86 85",
-      "subInfo": "Telegram orqali bog'laning",
-      "linkText": "TELEGRAM ORQALI BOG'LANISH"
-    }
-  },
-  "contactPage": {
-    "hero": {
-      "title": "Bog'lanish",
-      "breadcrumbHome": "Bosh sahifa",
-      "breadcrumbCurrent": "Bog'lanish"
-    }
-  },
-  "footer": {
-    "description": "There are many variations of passages by injected humour randomised",
-    "locationTitle": "Bizning manzil",
-    "markerTitle": "Koordinatalar: {{lat}}, {{lng}}"
-  }
+	"header": {
+		"address": "Chilonzor 17-kvartal, Bunyodkor shoh ko'chasi 33/1",
+		"nav": {
+			"home": "Bosh sahifa",
+			"services": "Xizmatlar",
+			"about": "Biz haqimizda",
+			"contact": "Bog'lanish"
+		}
+	},
+	"hero": {
+		"slides": {
+			"1": {
+				"pretitle": "TADQIQOT VA TEXNOLOGIYA",
+				"title": "Global taraqqiyot uchun ilmiy yetakchilik",
+				"description": "Biz sog'liqni saqlash, atrof-muhit va sanoat kelajagini shakllantiradigan ilmiy kashfiyotlar, mukammallik va texnologik yutuqlarga sodiqmiz.",
+				"cta": "TADQIQOTLARNI KO'RISH"
+			},
+			"2": {
+				"pretitle": "INNOVATSIYA",
+				"title": "Ilmiy izlanishlarning kelajagini boshlab beramiz",
+				"description": "Dunyo miqyosidagi jamoalar bilan hamkorlik qilib, kashfiyotlarni tezlashtiramiz va keng ko'lamda ishonchli natijalar taqdim etamiz.",
+				"cta": "XIZMATLARIMIZ"
+			},
+			"3": {
+				"pretitle": "KASHFIYOT",
+				"title": "G'oyalarni amaliy yechimlarga aylantiramiz",
+				"description": "Kontsepsiyadan tasdiqqacha РІР‚вЂќ sizning tadqiqot yo'lingizni mustahkam jarayonlar va ekspert hamkorliklari bilan qo'llab-quvvatlaymiz.",
+				"cta": "BOG'LANISH"
+			}
+		}
+	},
+	"aboutSection": {
+		"pretitle": "BIZ HAQIMIZDA",
+		"title": "Toshkentdagi LOR markazi РІР‚вЂќ 24/7 konsultatsiya",
+		"description": "Otorinolaringolog (LOR) quloq, burun va tomoq kasalliklarini davolaydi. Asoratlar va surunkali shaklga o'tish xavfini kamaytirish uchun o'z vaqtida tashxis va davolash muhim. Siz qulay vaqtda РІР‚вЂќ navbatsiz, yo'llanmasiz va ortiqcha hujjatlarsiz konsultatsiya olishingiz mumkin.",
+		"items": [
+			"Burun shilliq qavatining qurishi, burundan nafas olish qiyinlashishi",
+			"Uzoq davom etadigan tumov va/yoki yo'tal",
+			"Tez-tez burundan qon ketishi",
+			"Og'izdan yoqimsiz hid kelishi",
+			"Tinch bo'lmagan uyqu, ertalab charchoq, bosh aylanish",
+			"Tez charchash",
+			"Xo'rlash"
+		],
+		"cta": "Konsultatsiyaga yozilish",
+		"modal": {
+			"title": "Biz bilan bog'lanish",
+			"description": "Ism va telefon raqamingizni qoldiring — biz tezda aloqaga chiqamiz.",
+			"nameLabel": "Ism",
+			"namePlaceholder": "Ismingizni kiriting",
+			"phoneLabel": "Telefon raqam",
+			"phonePlaceholder": "Telefon raqamingizni kiriting",
+			"submit": "Yuborish",
+			"close": "Yopish"
+		}
+	},
+	"aboutPage": {
+		"hero": {
+			"title": "Biz haqimizda",
+			"breadcrumbHome": "Bosh sahifa",
+			"breadcrumbCurrent": "Biz haqimizda"
+		},
+		"content": {
+			"videoTitle": "Eshitish bilan muammo bormi? Endi buning yechimi oson! Endoskopik timpanoplastika!",
+			"title": "Lor sentr, Lor klinika, Yunusobod lor, Chilonzor lor, Lor med sentr, Lor 24/7 Toshkent, Lor operasiya, Lazer sentr",
+			"subtitle": "Yunusobod va Chilonzordagi LOR markazimiz dam olish kunlarisiz 24/7 ishlaydi",
+			"paragraph1": "Lor sentr, Lor klinika, Yunusobod lor, Chilonzor lor, Lor med sentr, Lor 24/7 Toshkent, Lor operasiya. Lazer yordamida operasiya, lazer sentr, lazer xirurgiya, quloqni lazer yordamida davolash, burunni lazer operasiyasi, endoskopik lazer yordamida septoplastika, endoskopik lazer vazatomiya.",
+			"paragraph2": "Otorinolaringolog (LOR) quloq, burun va tomoq (halqum, traxeya, farenks) kasalliklarini davolaydi. Asoratlar va surunkali shaklga o'tish xavfini kamaytirish uchun ularni o'z vaqtida tashxislash muhim. LOR 24/7 markazimizda siz tajribali shifokorga qulay vaqtda РІР‚вЂќ navbatsiz, yo'llanmasiz va ortiqcha hujjatlarsiz murojaat qilishingiz mumkin.",
+			"sectionTitle": "Otorinolaringolog maslahati kimga kerak?",
+			"sectionLead": "LOR a'zolari bilan bog'liq muammolarni e'tiborsiz qoldirib bo'lmaydi. Shifokorga tashrifni kechiktirmang!",
+			"list": [
+				"Burun shilliq qavatining qurishi, burun nafasida qiyinchilik",
+				"Uzoq davom etadigan tumov yoki yo'tal",
+				"Tez-tez burundan qon ketishi",
+				"Og'izdan yoqimsiz hid",
+				"Uyqu buzilishi, ertalab charchoq, bosh aylanish",
+				"Tez charchash",
+				"Xo'rlash"
+			],
+			"alertTitle": "Diqqat!",
+			"alertLead": "Quyidagi holatlarda LOR shifokorining shoshilinch maslahati zarur:",
+			"alertList": [
+				"Sinuslarda og'riq, yiringli oqim",
+				"Eshitish yoki hid bilishning buzilishi",
+				"Quloqlarda g'ayrioddiy oqim, shovqin, og'riq yoki bosim",
+				"Tomoq qizarishi, yutish qiyinligi, jag' osti limfa tugunlarining shishishi"
+			]
+		}
+	},
+	"labProduct": {
+		"pretitle": "SIZ UCHUN YANADA YAXSHI",
+		"title": "Eng yaxshi laboratoriya mahsuloti bilan tajriba",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor.",
+		"imageAlt": "Laboratoriyada ishlayotgan tadqiqotchilar",
+		"left": {
+			"1": {
+				"title": "Ilg'or tahlillar",
+				"desc": "Laboratoriya samaradorligi va natijalarni yaxshilash uchun aniq tahliliy xulosalar."
+			},
+			"2": {
+				"title": "Marketing avtomatizatsiyasi",
+				"desc": "Maqsadli va o'lchab bo'ladigan samaralar uchun oqilona ish jarayonlari."
+			}
+		},
+		"right": {
+			"1": {
+				"title": "Hisobot samaradorligi",
+				"desc": "Aniqlikni yo'qotmasdan vaqtni tejaydigan soddalashtirilgan hisobotlar."
+			},
+			"2": {
+				"title": "To'liq kuzatuv",
+				"desc": "Qabuldan topshirishgacha bo'lgan har bir holat nazoratda bo'ladi."
+			},
+			"3": {
+				"title": "Uskunalarimiz",
+				"desc": "Barqaror aniqlik uchun sozlangan zamonaviy asbob-uskunalar."
+			}
+		}
+	},
+	"caseStudies": {
+		"pretitle": "Amaliy holatlar",
+		"title": "G'oyalarni ilmiy yutuqlarga aylantiramiz"
+	},
+	"contactSection": {
+		"pretitle": "BIZ BILAN BOG'LANING",
+		"title": "Bog'laning РІР‚вЂќ bepul baho oling!",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor. Cras in pulvinar augue.",
+		"imageAlt": "Laboratoriya ishlari",
+		"form": {
+			"title": "Jamoamiz javob beradi",
+			"nameLabel": "Ismingiz *",
+			"namePlaceholder": "Masalan, John Doe",
+			"phoneLabel": "Telefon raqam *",
+			"phonePlaceholder": "Telefon raqamingizni kiriting",
+			"submit": "XABAR YUBORISH",
+			"alert": "Forma yuborildi (demo). Konsolni tekshiring."
+		},
+		"stats": {
+			"title": "Yaxshi kelajak uchun ilg'or laboratoriya xizmatlari",
+			"item1": "TADQIQOT JARAYONI",
+			"item2": "G'OYADAN KASHFIYOTGACHA"
+		}
+	},
+	"contactInfo": {
+		"location": {
+			"title": "Manzil",
+			"info": "Chilonzor 17-kvartal, Bunyodkor shoh ko'chasi 33/1",
+			"subInfo": "",
+			"linkText": "MANZILNI KO'RISH"
+		},
+		"phone": {
+			"title": "Telefon",
+			"info": "+998 97 730 86 85",
+			"subInfo": "",
+			"linkText": "QO'NG'IROQ QILISH"
+		},
+		"telegram": {
+			"title": "Telegram",
+			"info": "+998 97 730 86 85",
+			"subInfo": "Telegram orqali bog'laning",
+			"linkText": "TELEGRAM ORQALI BOG'LANISH"
+		}
+	},
+	"contactPage": {
+		"hero": {
+			"title": "Bog'lanish",
+			"breadcrumbHome": "Bosh sahifa",
+			"breadcrumbCurrent": "Bog'lanish"
+		}
+	},
+	"operations": {
+		"pretitle": "Operatsiyalar nomi",
+		"title": "Operatsiyalar ro'yxati",
+		"description": "Operatsiya va protseduralar to'liq ro'yxati.",
+		"imagePlaceholder": "Rasm (keyin qo'yiladi)",
+		"list": [
+			"Adenotomiya (sheyver usuli, bolalar)",
+			"Adenotomiya (sheyver usuli, kattalar)",
+			"RadiotoРІР‚Вlqinli vazotomiya",
+			"Endoskopik radiotoРІР‚Вlqinli vazotomiya",
+			"Endoskopik septoplastika",
+			"Septoplastika + endoskopik radiotoРІР‚Вlqinli vazotomiya",
+			"Endoskopik septoplastika + endoskopik radiotoРІР‚Вlqinli vazotomiya",
+			"RadiotoРІР‚Вlqinli tonsillotomiya",
+			"RadiotoРІР‚Вlqinli tonsillektomiya",
+			"Krasnojon usulida bir tomondan mikrogaymorotomiya",
+			"Endoskopik endonazal sheyverli gaymorotomiya (bir tomondan)",
+			"Endoskopik endonazal sheyverli frontotomiya (bir tomondan)",
+			"Endoskopik endonazal sheyverli sfenoidotomiya (bir tomondan)",
+			"Endoskopik endonazal sheyverli polipotomiya",
+			"Endoskopik endonazal sheyverli dakriotsistorinostomiya (bir tomondan)",
+			"Paratsentez (bir tomondan)",
+			"Baraban pardasini shuntlash (bir tomondan)",
+			"Birlamchi ochiq rinoseptoplastika",
+			"Ikkilamchi ochiq rinoseptoplastika",
+			"Quloqda radikal operatsiya (bir tomondan)",
+			"Timpanoplastika (bir tomondan)",
+			"Tashqi eshitish yoРІР‚Вlidan poliplarni olib tashlash (bir tomondan)",
+			"Xurrakda yumshoq tanglay va tilchani plastikasi",
+			"Burun suyaklarini repozitsiya qilish",
+			"Burun toРІР‚ВsigРІР‚Вi tomirlarini kuydirish",
+			"Jarohatlarda baraban pardasini tiklash",
+			"Narkoz",
+			"Palata (1 sutka, kuzatuv uchun)",
+			"Dori-darmonlar"
+		]
+	},
+	"footer": {
+		"description": "There are many variations of passages by injected humour randomised",
+		"locationTitle": "Bizning manzil",
+		"markerTitle": "Koordinatalar: {{lat}}, {{lng}}"
+	}
 }

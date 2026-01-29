@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom'
 
 type Slide = {
   id: number;
@@ -17,7 +18,7 @@ const SLIDES: Slide[] = [
     pretitleKey: "hero.slides.1.pretitle",
     titleKey: "hero.slides.1.title",
     descriptionKey: "hero.slides.1.description",
-    ctaLabelKey: "hero.slides.1.cta",
+    ctaLabelKey: "hero.slides.2.cta",
     ctaHref: "#research",
     image: "/hero.webp",
   },
@@ -35,7 +36,7 @@ const SLIDES: Slide[] = [
     pretitleKey: "hero.slides.3.pretitle",
     titleKey: "hero.slides.3.title",
     descriptionKey: "hero.slides.3.description",
-    ctaLabelKey: "hero.slides.3.cta",
+    ctaLabelKey: "hero.slides.2.cta",
     ctaHref: "#contact",
     image: "/hero.webp",
   },
@@ -118,8 +119,8 @@ const HeroCarousel: React.FC = () => {
                 </p>
 
                 <div className="mt-10 flex items-center gap-6">
-                  <a
-                    href={SLIDES[index].ctaHref}
+                  <Link
+                    to='/services'
                     className="inline-flex items-center gap-3 bg-[#0c5adb] hover:bg-[#094bbd] text-white px-6.5 py-3 rounded-full text-[16px] font-medium uppercase"
                   >
                     {SLIDES[index].ctaLabelKey ? t(SLIDES[index].ctaLabelKey) : ""}
@@ -131,7 +132,7 @@ const HeroCarousel: React.FC = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* indicators bottom-left like image (two outlines + one filled style) */}

@@ -128,7 +128,7 @@ const LabProductSection = () => {
 					<div className='relative'>
 						<div className='bg-white rounded-2xl overflow-hidden'>
 							<img
-								src='/for-you.webp'
+								src='/lab-img.jpg'
 								alt={t('labProduct.imageAlt')}
 								className='w-full h-[420px] object-cover'
 							/>

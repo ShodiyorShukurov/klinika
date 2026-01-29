@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 type Service = {
 	id: number
@@ -114,8 +115,8 @@ const Services: React.FC = () => {
 
 				{/* Optional CTA below services */}
 				<div className='mt-10 text-center'>
-					<a
-						href='#contact'
+					<Link
+						to='/services'
 						className='inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-sm font-medium shadow'
 					>
 						View All Services
@@ -132,7 +133,7 @@ const Services: React.FC = () => {
 								strokeLinejoin='round'
 							/>
 						</svg>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</section>

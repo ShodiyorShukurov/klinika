@@ -1,167 +1,214 @@
 {
-  "header": {
-    "address": "Chilonzor 17-quarter, Bunyodkor shoh street 33/1",
-    "nav": {
-      "home": "Home",
-      "services": "Services",
-      "about": "About Us",
-      "contact": "Contact Us"
-    }
-  },
-  "hero": {
-    "slides": {
-      "1": {
-        "pretitle": "RESEARCH & TECHNOLOGY",
-        "title": "Pioneering Science For Global Progress",
-        "description": "We are dedicated to groundbreaking discoveries, scientific excellence, and technological advancements that shape the future of healthcare, environment, and industry.",
-        "cta": "VIEW RESEARCH"
-      },
-      "2": {
-        "pretitle": "INNOVATION",
-        "title": "Leading The Future Of Scientific Exploration",
-        "description": "Collaborating with world-class teams to accelerate discovery and deliver reproducible research outcomes at scale.",
-        "cta": "OUR SERVICES"
-      },
-      "3": {
-        "pretitle": "DISCOVERY",
-        "title": "Transforming Ideas Into Real-World Solutions",
-        "description": "From concept to validation — we support your research journey with robust pipelines and expert partnerships.",
-        "cta": "CONTACT US"
-      }
-    }
-  },
-  "aboutSection": {
-    "pretitle": "ABOUT US",
-    "title": "ENT Center in Tashkent — consultations 24/7",
-    "description": "An otolaryngologist (ENT) treats diseases of the ear, nose, and throat. Timely diagnosis and treatment reduce the risk of complications and chronic conditions. You can get a consultation at a convenient time — without queues, referrals, or paperwork.",
-    "items": [
-      "Dry nasal mucosa and difficulty breathing through the nose",
-      "Prolonged runny nose and/or cough",
-      "Frequent nosebleeds",
-      "Bad breath",
-      "Restless sleep, morning fatigue, dizziness",
-      "Rapid fatigue",
-      "Snoring"
-    ],
-    "cta": "Book a consultation"
-  },
-  "aboutPage": {
-    "hero": {
-      "title": "About Us",
-      "breadcrumbHome": "Home",
-      "breadcrumbCurrent": "About Us"
-    },
-    "content": {
-      "videoTitle": "Are you experiencing hearing problems? Now the solution is easy! Endoscopic tympanoplasty!",
-      "title": "ENT center, ENT clinic, Yunusabad ENT, Chilonzor ENT, ENT med center, ENT 24/7 Tashkent, ENT surgery, Laser center",
-      "subtitle": "Our ENT clinic in Yunusabad and Chilonzor works 24/7 without days off",
-      "paragraph1": "ENT center, ENT clinic, Yunusabad ENT, Chilonzor ENT, ENT med center, ENT 24/7 Tashkent, ENT surgery. Laser-assisted surgery, laser center, laser surgery, laser ear treatment, laser nasal surgery, endoscopic laser septoplasty, endoscopic laser vasotomy.",
-      "paragraph2": "An otolaryngologist (ENT) treats diseases of the ear, nose, and throat (larynx, trachea, pharynx). Timely diagnosis and treatment help prevent complications and chronic forms. At our ENT 24/7 center you can visit an experienced specialist at a convenient time — without queues, referrals, or paperwork.",
-      "sectionTitle": "Who needs an otolaryngologist consultation?",
-      "sectionLead": "Signs of ENT disorders should not be ignored. Do not delay a visit to an ENT doctor!",
-      "list": [
-        "Dry nasal mucosa and difficulty breathing through the nose",
-        "Prolonged runny nose or cough",
-        "Frequent nosebleeds",
-        "Bad breath",
-        "Sleep disturbances, morning fatigue, dizziness",
-        "Rapid fatigue",
-        "Snoring"
-      ],
-      "alertTitle": "Attention!",
-      "alertLead": "Urgent ENT consultation is required for:",
-      "alertList": [
-        "Sinus pain and purulent discharge",
-        "Impaired hearing or smell",
-        "Unusual ear discharge, noise, pain, or pressure",
-        "Throat redness, difficulty swallowing, swollen lymph nodes under the jaw"
-      ]
-    }
-  },
-  "labProduct": {
-    "pretitle": "BETTER FOR YOU",
-    "title": "Experiment With Best Lab Product",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor.",
-    "imageAlt": "Lab researchers working",
-    "left": {
-      "1": {
-        "title": "Advanced Analytics",
-        "desc": "Actionable insights that help you optimize lab performance and outcomes."
-      },
-      "2": {
-        "title": "Marketing Automation",
-        "desc": "Smarter workflows that keep your outreach consistent and measurable."
-      }
-    },
-    "right": {
-      "1": {
-        "title": "Report Efficiency",
-        "desc": "Streamlined reporting that saves time without losing precision."
-      },
-      "2": {
-        "title": "Complete Cases",
-        "desc": "From intake to delivery, every case is tracked and accountable."
-      },
-      "3": {
-        "title": "Our Equipment",
-        "desc": "Modern instruments calibrated for consistent lab-grade accuracy."
-      }
-    }
-  },
-  "caseStudies": {
-    "pretitle": "Case Studies",
-    "title": "Transforming Ideas Into Scientific Achievements"
-  },
-  "contactSection": {
-    "pretitle": "CONTACT US",
-    "title": "Contact Us Get Your Free Estimate!",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor. Cras in pulvinar augue.",
-    "imageAlt": "Lab work",
-    "form": {
-      "title": "Our Team Will Respond",
-      "nameLabel": "Your Name *",
-      "namePlaceholder": "Ex. John Doe",
-      "phoneLabel": "Phone Number *",
-      "phonePlaceholder": "Enter Phone Number",
-      "submit": "SEND MESSAGE",
-      "alert": "Form submitted (demo). Check console."
-    },
-    "stats": {
-      "title": "Pioneering Laboratory Services For A Better Future",
-      "item1": "RESEARCH PROCESS",
-      "item2": "CONCEPT TO DISCOVERY"
-    }
-  },
-  "contactInfo": {
-    "location": {
-      "title": "Location",
-      "info": "Chilonzor 17-quarter, Bunyodkor shoh street 33/1",
-      "subInfo": "",
-      "linkText": "CHECK LOCATION"
-    },
-    "phone": {
-      "title": "Phone",
-      "info": "+998 97 730 86 85",
-      "subInfo": "",
-      "linkText": "CALL NOW"
-    },
-    "telegram": {
-      "title": "Telegram",
-      "info": "+998 97 730 86 85",
-      "subInfo": "Contact us via Telegram",
-      "linkText": "CONTACT VIA TELEGRAM"
-    }
-  },
-  "contactPage": {
-    "hero": {
+	"header": {
+		"address": "Chilonzor 17-quarter, Bunyodkor shoh street 33/1",
+		"nav": {
+			"home": "Home",
+			"services": "Services",
+			"about": "About Us",
+			"contact": "Contact Us"
+		}
+	},
+	"hero": {
+		"slides": {
+			"1": {
+				"pretitle": "RESEARCH & TECHNOLOGY",
+				"title": "Pioneering Science For Global Progress",
+				"description": "We are dedicated to groundbreaking discoveries, scientific excellence, and technological advancements that shape the future of healthcare, environment, and industry.",
+				"cta": "VIEW RESEARCH"
+			},
+			"2": {
+				"pretitle": "INNOVATION",
+				"title": "Leading The Future Of Scientific Exploration",
+				"description": "Collaborating with world-class teams to accelerate discovery and deliver reproducible research outcomes at scale.",
+				"cta": "OUR SERVICES"
+			},
+			"3": {
+				"pretitle": "DISCOVERY",
+				"title": "Transforming Ideas Into Real-World Solutions",
+				"description": "From concept to validation РІР‚вЂќ we support your research journey with robust pipelines and expert partnerships.",
+				"cta": "CONTACT US"
+			}
+		}
+	},
+	"aboutSection": {
+		"pretitle": "ABOUT US",
+		"title": "ENT Center in Tashkent РІР‚вЂќ consultations 24/7",
+		"description": "An otolaryngologist (ENT) treats diseases of the ear, nose, and throat. Timely diagnosis and treatment reduce the risk of complications and chronic conditions. You can get a consultation at a convenient time РІР‚вЂќ without queues, referrals, or paperwork.",
+		"items": [
+			"Dry nasal mucosa and difficulty breathing through the nose",
+			"Prolonged runny nose and/or cough",
+			"Frequent nosebleeds",
+			"Bad breath",
+			"Restless sleep, morning fatigue, dizziness",
+			"Rapid fatigue",
+			"Snoring"
+		],
+    "cta": "Book a consultation",
+    "modal": {
       "title": "Contact Us",
-      "breadcrumbHome": "Home",
-      "breadcrumbCurrent": "Contact Us"
+      "description": "Leave your name and phone number — we will contact you shortly.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Enter your name",
+      "phoneLabel": "Phone number",
+      "phonePlaceholder": "Enter your phone number",
+      "submit": "Send",
+      "close": "Close"
     }
   },
-  "footer": {
-    "description": "There are many variations of passages by injected humour randomised",
-    "locationTitle": "Our Location",
-    "markerTitle": "Coordinates: {{lat}}, {{lng}}"
-  }
+	"aboutPage": {
+		"hero": {
+			"title": "About Us",
+			"breadcrumbHome": "Home",
+			"breadcrumbCurrent": "About Us"
+		},
+		"content": {
+			"videoTitle": "Are you experiencing hearing problems? Now the solution is easy! Endoscopic tympanoplasty!",
+			"title": "ENT center, ENT clinic, Yunusabad ENT, Chilonzor ENT, ENT med center, ENT 24/7 Tashkent, ENT surgery, Laser center",
+			"subtitle": "Our ENT clinic in Yunusabad and Chilonzor works 24/7 without days off",
+			"paragraph1": "ENT center, ENT clinic, Yunusabad ENT, Chilonzor ENT, ENT med center, ENT 24/7 Tashkent, ENT surgery. Laser-assisted surgery, laser center, laser surgery, laser ear treatment, laser nasal surgery, endoscopic laser septoplasty, endoscopic laser vasotomy.",
+			"paragraph2": "An otolaryngologist (ENT) treats diseases of the ear, nose, and throat (larynx, trachea, pharynx). Timely diagnosis and treatment help prevent complications and chronic forms. At our ENT 24/7 center you can visit an experienced specialist at a convenient time РІР‚вЂќ without queues, referrals, or paperwork.",
+			"sectionTitle": "Who needs an otolaryngologist consultation?",
+			"sectionLead": "Signs of ENT disorders should not be ignored. Do not delay a visit to an ENT doctor!",
+			"list": [
+				"Dry nasal mucosa and difficulty breathing through the nose",
+				"Prolonged runny nose or cough",
+				"Frequent nosebleeds",
+				"Bad breath",
+				"Sleep disturbances, morning fatigue, dizziness",
+				"Rapid fatigue",
+				"Snoring"
+			],
+			"alertTitle": "Attention!",
+			"alertLead": "Urgent ENT consultation is required for:",
+			"alertList": [
+				"Sinus pain and purulent discharge",
+				"Impaired hearing or smell",
+				"Unusual ear discharge, noise, pain, or pressure",
+				"Throat redness, difficulty swallowing, swollen lymph nodes under the jaw"
+			]
+		}
+	},
+	"labProduct": {
+		"pretitle": "BETTER FOR YOU",
+		"title": "Experiment With Best Lab Product",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor.",
+		"imageAlt": "Lab researchers working",
+		"left": {
+			"1": {
+				"title": "Advanced Analytics",
+				"desc": "Actionable insights that help you optimize lab performance and outcomes."
+			},
+			"2": {
+				"title": "Marketing Automation",
+				"desc": "Smarter workflows that keep your outreach consistent and measurable."
+			}
+		},
+		"right": {
+			"1": {
+				"title": "Report Efficiency",
+				"desc": "Streamlined reporting that saves time without losing precision."
+			},
+			"2": {
+				"title": "Complete Cases",
+				"desc": "From intake to delivery, every case is tracked and accountable."
+			},
+			"3": {
+				"title": "Our Equipment",
+				"desc": "Modern instruments calibrated for consistent lab-grade accuracy."
+			}
+		}
+	},
+	"caseStudies": {
+		"pretitle": "Case Studies",
+		"title": "Transforming Ideas Into Scientific Achievements"
+	},
+	"contactSection": {
+		"pretitle": "CONTACT US",
+		"title": "Contact Us Get Your Free Estimate!",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, diam ut hendrerit elementum, dolor metus eleifend erat, vitae scelerisque massa justo non dolor. Cras in pulvinar augue.",
+		"imageAlt": "Lab work",
+		"form": {
+			"title": "Our Team Will Respond",
+			"nameLabel": "Your Name *",
+			"namePlaceholder": "Ex. John Doe",
+			"phoneLabel": "Phone Number *",
+			"phonePlaceholder": "Enter Phone Number",
+			"submit": "SEND MESSAGE",
+			"alert": "Form submitted (demo). Check console."
+		},
+		"stats": {
+			"title": "Pioneering Laboratory Services For A Better Future",
+			"item1": "RESEARCH PROCESS",
+			"item2": "CONCEPT TO DISCOVERY"
+		}
+	},
+	"contactInfo": {
+		"location": {
+			"title": "Location",
+			"info": "Chilonzor 17-quarter, Bunyodkor shoh street 33/1",
+			"subInfo": "",
+			"linkText": "CHECK LOCATION"
+		},
+		"phone": {
+			"title": "Phone",
+			"info": "+998 97 730 86 85",
+			"subInfo": "",
+			"linkText": "CALL NOW"
+		},
+		"telegram": {
+			"title": "Telegram",
+			"info": "+998 97 730 86 85",
+			"subInfo": "Contact us via Telegram",
+			"linkText": "CONTACT VIA TELEGRAM"
+		}
+	},
+	"contactPage": {
+		"hero": {
+			"title": "Contact Us",
+			"breadcrumbHome": "Home",
+			"breadcrumbCurrent": "Contact Us"
+		}
+	},
+	"operations": {
+		"pretitle": "Operation Names",
+		"title": "Operation List",
+		"description": "Full list of operations and procedures.",
+		"imagePlaceholder": "Image placeholder",
+		"list": [
+			"Adenotomy (shaver technique, children)",
+			"Adenotomy (shaver technique, adults)",
+			"Radiofrequency vasotomy",
+			"Endoscopic radiofrequency vasotomy",
+			"Endoscopic septoplasty",
+			"Septoplasty + endoscopic radiofrequency vasotomy",
+			"Endoscopic septoplasty + endoscopic radiofrequency vasotomy",
+			"Radiofrequency tonsillotomy",
+			"Radiofrequency tonsillectomy",
+			"Micro maxillary sinusotomy by Krasnozhon (one side)",
+			"Endoscopic endonasal shaver maxillary sinusotomy (one side)",
+			"Endoscopic endonasal shaver frontal sinusotomy (one side)",
+			"Endoscopic endonasal shaver sphenoidotomy (one side)",
+			"Endoscopic endonasal shaver polypectomy",
+			"Endoscopic endonasal shaver dacryocystorhinostomy (one side)",
+			"Paracentesis (one side)",
+			"Tympanic membrane shunting (one side)",
+			"Primary open rhinoseptoplasty",
+			"Secondary open rhinoseptoplasty",
+			"Radical ear surgery (one side)",
+			"Tympanoplasty (one side)",
+			"Removal of polyps from the external auditory canal (one side)",
+			"Soft palate and uvula plasty for snoring",
+			"Nasal bone reposition",
+			"Cauterization of nasal septum vessels",
+			"Reconstruction of tympanic membrane after trauma",
+			"Anesthesia",
+			"Hospital room (1 day, for observation)",
+			"Medications"
+		]
+	},
+	"footer": {
+		"description": "There are many variations of passages by injected humour randomised",
+		"locationTitle": "Our Location",
+		"markerTitle": "Coordinates: {{lat}}, {{lng}}"
+	}
 }
