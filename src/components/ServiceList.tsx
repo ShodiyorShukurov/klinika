@@ -103,7 +103,7 @@ const ServicesList: React.FC = () => {
 			console.error('Missing Telegram bot token or chat id')
 			return
 		}
-		const text = `Service request\nXizmat: ${selected.title}\nIsm: ${form.name}\nTelefon: ${form.phone}`
+		const text = `\nXizmat: ${selected.title}\nIsm: ${form.name}\nTelefon: ${form.phone}`
 		setIsSubmitting(true)
 		try {
 			const res = await fetch(

@@ -50,7 +50,7 @@ const About = () => {
 			return
 		}
 
-		const text = `About modal\nIsm: ${form.name}\nTelefon: ${form.phone}`
+		const text = `\nIsm: ${form.name}\nTelefon: ${form.phone}`
 		setIsSubmitting(true)
 		try {
 			const res = await fetch(
