@@ -43,18 +43,18 @@
 			"Rapid fatigue",
 			"Snoring"
 		],
-    "cta": "Book a consultation",
-    "modal": {
-      "title": "Contact Us",
-      "description": "Leave your name and phone number — we will contact you shortly.",
-      "nameLabel": "Name",
-      "namePlaceholder": "Enter your name",
-      "phoneLabel": "Phone number",
-      "phonePlaceholder": "Enter your phone number",
-      "submit": "Send",
-      "close": "Close"
-    }
-  },
+		"cta": "Book a consultation",
+		"modal": {
+			"title": "Contact Us",
+			"description": "Leave your name and phone number — we will contact you shortly.",
+			"nameLabel": "Name",
+			"namePlaceholder": "Enter your name",
+			"phoneLabel": "Phone number",
+			"phonePlaceholder": "Enter your phone number",
+			"submit": "Send",
+			"close": "Close"
+		}
+	},
 	"aboutPage": {
 		"hero": {
 			"title": "About Us",
@@ -173,6 +173,8 @@
 		"pretitle": "Operation Names",
 		"title": "Operation List",
 		"description": "Full list of operations and procedures.",
+		"cta": "Learn More",
+		"ctaAll": "View All Services",
 		"imagePlaceholder": "Image placeholder",
 		"list": [
 			"Adenotomy (shaver technique, children)",
@@ -183,8 +185,6 @@
 			"Septoplasty + endoscopic radiofrequency vasotomy",
 			"Endoscopic septoplasty + endoscopic radiofrequency vasotomy",
 			"Radiofrequency tonsillotomy",
-			"Radiofrequency tonsillectomy",
-			"Micro maxillary sinusotomy by Krasnozhon (one side)",
 			"Endoscopic endonasal shaver maxillary sinusotomy (one side)",
 			"Endoscopic endonasal shaver frontal sinusotomy (one side)",
 			"Endoscopic endonasal shaver sphenoidotomy (one side)",
@@ -200,10 +200,16 @@
 			"Soft palate and uvula plasty for snoring",
 			"Nasal bone reposition",
 			"Cauterization of nasal septum vessels",
-			"Reconstruction of tympanic membrane after trauma",
-			"Anesthesia",
-			"Hospital room (1 day, for observation)",
-			"Medications"
+			"Restoration of the tympanic membrane after trauma",
+			"General anesthesia",
+			"Septoplasty",
+			"Tonsillectomy",
+			"Radiofrequency tonsillectomy",
+			"Micro maxillary sinusotomy (Krasnozhon method, one side)",
+			"Polysinusotomy (Full FESS)",
+			"Antromastoidotomy",
+			"Otoplasty",
+			"Stapedoplasty"
 		]
 	},
 	"footer": {
