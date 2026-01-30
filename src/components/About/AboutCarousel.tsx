@@ -9,7 +9,6 @@ const AboutCarousel: React.FC = () => {
 		'/carousel/carousel3.png',
 		'/carousel/carousel4.png',
 		'/carousel/carousel5.png',
-		'/carousel/carousel6.png',
 	]
 	const [index, setIndex] = useState(0)
 
