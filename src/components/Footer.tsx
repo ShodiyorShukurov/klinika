@@ -43,24 +43,27 @@ const Footer: React.FC = () => {
 
 							<div className='flex items-center gap-3'>
 								<a
-									href='https://www.youtube.com/@endoloruz'
+									href='https://www.youtube.com/@shavkatlor'
 									aria-label='YouTube'
+									target='_blank'
 									className='w-10 h-10 rounded-full bg-white/95 flex items-center justify-center text-[#041926] hover:scale-105 transition'
 								>
 									<Youtube className='w-5 h-5' />
 								</a>
 
 								<a
-									href='https://www.instagram.com/shavkat_lor'
+									href='https://www.instagram.com/dr.shavkat_lor'
 									aria-label='Instagram'
+									target='_blank'
 									className='w-10 h-10 rounded-full bg-white/95 flex items-center justify-center text-[#041926] hover:scale-105 transition'
 								>
 									<Instagram className='w-5 h-5' />
 								</a>
 
 								<a
-									href='https://t.me/+998977308685'
+									href='https://t.me/+998903258600'
 									aria-label='Telegram'
+									target='_blank'
 									className='w-10 h-10 rounded-full bg-white/95 flex items-center justify-center text-[#041926] hover:scale-105 transition'
 								>
 									<Send className='w-5 h-5' />

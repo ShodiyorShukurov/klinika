@@ -30,7 +30,7 @@ const ContactUs = () => {
 			<ContactInfoCards />
 			<ContactFormSection />
 
-			<div className='w-full h-[600px] bg-gray-700 rounded-md overflow-hidden'>
+			<div className='w-full h-[600px] bg-gray-700 rounded-md overflow-hidden' id='map'>
 				<GoogleMapReact
 					bootstrapURLKeys={{
 						key: 'AIzaSyB01Ad7b4Dt3BsrUL13vLMZoRjRsSyGIeo',

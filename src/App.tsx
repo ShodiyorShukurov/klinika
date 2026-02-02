@@ -4,15 +4,17 @@ import ServicePage from './page/ServicePage'
 import ServiceDetails from './page/ServiceDetails'
 import ContactUs from './page/ContactUs'
 import About from './page/About'
+import VideoPage from './page/VideoPage'
 
 const App = () => {
 	return (
 		<Routes>
 			<Route path='/' element={<HomePage />} />
 			<Route path='/services' element={<ServicePage />} />
-			<Route path="/services/:slug" element={<ServiceDetails />} />
-			<Route path="/contact" element={<ContactUs />} />
-			<Route path="/about" element={<About />} />
+			<Route path='/services/:slug' element={<ServiceDetails />} />
+			<Route path='/contact' element={<ContactUs />} />
+			<Route path='/about' element={<About />} />
+			<Route path='/videos' element={<VideoPage />} />
 		</Routes>
 	)
 }

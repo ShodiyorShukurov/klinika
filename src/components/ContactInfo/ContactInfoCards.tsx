@@ -12,7 +12,7 @@ const ContactInfoCards: React.FC = () => {
 			subInfo: t('contactInfo.location.subInfo'),
 			link: {
 				text: t('contactInfo.location.linkText'),
-				href: '#',
+				href: '#map',
 			},
 		},
 		{
@@ -22,7 +22,7 @@ const ContactInfoCards: React.FC = () => {
 			subInfo: t('contactInfo.phone.subInfo'),
 			link: {
 				text: t('contactInfo.phone.linkText'),
-				href: 'tel:+998977308685',
+				href: 'tel:+998903258600',
 			},
 		},
 		{
@@ -32,7 +32,7 @@ const ContactInfoCards: React.FC = () => {
 			subInfo: t('contactInfo.telegram.subInfo'),
 			link: {
 				text: t('contactInfo.telegram.linkText'),
-				href: 'https://t.me/+998977308685',
+				href: 'https://t.me/+998903258600',
 			},
 		},
 	]

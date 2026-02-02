@@ -5,8 +5,39 @@
 			"home": "Home",
 			"services": "Services",
 			"about": "About Us",
-			"contact": "Contact Us"
+			"contact": "Contact Us",
+			"videos": "Videos"
 		}
+	},
+	"videoPage": {
+		"hero": {
+			"pretitle": "VIDEO MATERIALS",
+			"title": "Helpful videos by condition",
+			"breadcrumbHome": "Home",
+			"breadcrumbCurrent": "Videos"
+		},
+		"section": {
+			"pretitle": "CATEGORIES",
+			"title": "Pick the topic you need",
+			"description": "Watch YouTube videos organized by conditions and topics."
+		},
+		"categories": {
+			"all": "All",
+			"nose": "Nose",
+			"ear": "Ear",
+			"throat": "Throat",
+			"allergy": "Allergy",
+			"kids": "Kids"
+		},
+		"categoryLabels": {
+			"nose": "Nose",
+			"ear": "Ear",
+			"throat": "Throat",
+			"allergy": "Allergy",
+			"kids": "Kids"
+		},
+		"watchOnYoutube": "Watch on YouTube",
+		"empty": "No videos in this category yet."
 	},
 	"hero": {
 		"slides": {
@@ -161,13 +192,13 @@
 		},
 		"phone": {
 			"title": "Phone",
-			"info": "+998 97 730 86 85",
+			"info": "+998 90 325 86 00",
 			"subInfo": "",
 			"linkText": "CALL NOW"
 		},
 		"telegram": {
 			"title": "Telegram",
-			"info": "+998 97 730 86 85",
+			"info": "+998 90 325 86 00",
 			"subInfo": "Contact us via Telegram",
 			"linkText": "CONTACT VIA TELEGRAM"
 		}

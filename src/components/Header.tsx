@@ -47,15 +47,17 @@ const Header: React.FC = () => {
 						<div className='flex items-center gap-4'>
 							{/* Social icons (simple SVGs) */}
 							<a
-								href='https://www.youtube.com/@endoloruz'
+								href='https://www.youtube.com/@shavkatlor'
 								aria-label='github'
+								target='_blank'
 								className='text-white hover:text-[#0c5adb] transition-all duration-300'
 							>
 								<Youtube size={20} />
 							</a>
 							<a
-								href='https://www.instagram.com/shavkat_lor'
+								href='https://www.instagram.com/dr.shavkat_lor'
 								aria-label='github'
+								target='_blank'
 								className='text-white hover:text-[#0c5adb] transition-all duration-300'
 							>
 								<Instagram size={16} />
@@ -108,6 +110,11 @@ const Header: React.FC = () => {
 									</NavLink>
 								</li>
 								<li>
+									<NavLink to='/videos' className='hover:text-blue-600'>
+										{t('header.nav.videos')}
+									</NavLink>
+								</li>
+								<li>
 									<NavLink to='/contact' className='hover:text-blue-600'>
 										{t('header.nav.contact')}
 									</NavLink>
@@ -137,8 +144,8 @@ const Header: React.FC = () => {
 									</svg>
 								</div>
 								<div className='text-[16px] font-medium'>
-									<a href='tel:+998977308685' className='text-[#041424]'>
-										+998 97 730 86 85
+									<a href='tel:+998903258600' className='text-[#041424]'>
+										+998 90 325 86 00
 									</a>
 								</div>
 								<div className='hidden lg:flex items-center gap-1 rounded-full border border-blue-100 bg-blue-50 p-1 text-[13px] font-semibold uppercase'>
@@ -273,6 +280,15 @@ const Header: React.FC = () => {
 											className='block py-2 px-4 hover:text-blue-600 hover:bg-gray-100 rounded'
 										>
 											{t('header.nav.about')}
+										</NavLink>
+									</li>
+									<li>
+										<NavLink
+											to='/videos'
+											onClick={() => setIsMenuOpen(false)}
+											className='block py-2 px-4 hover:text-blue-600 hover:bg-gray-100 rounded'
+										>
+											{t('header.nav.videos')}
 										</NavLink>
 									</li>
 									<li>

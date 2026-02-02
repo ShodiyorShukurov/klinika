@@ -5,8 +5,39 @@
 			"home": "Bosh sahifa",
 			"services": "Xizmatlar",
 			"about": "Biz haqimizda",
-			"contact": "Bog'lanish"
+			"contact": "Bog'lanish",
+			"videos": "Videolar"
 		}
+	},
+	"videoPage": {
+		"hero": {
+			"pretitle": "VIDEO MA'LUMOTLAR",
+			"title": "Kasalliklar bo'yicha foydali videolar",
+			"breadcrumbHome": "Bosh sahifa",
+			"breadcrumbCurrent": "Videolar"
+		},
+		"section": {
+			"pretitle": "KATEGORIYALAR",
+			"title": "Sizga kerakli mavzuni tanlang",
+			"description": "YouTube'dan olingan videolarni kasalliklar va mavzular bo'yicha saralab tomosha qiling."
+		},
+		"categories": {
+			"all": "Barchasi",
+			"nose": "Burun",
+			"ear": "Quloq",
+			"throat": "Tomoq",
+			"allergy": "Allergiya",
+			"kids": "Bolalar"
+		},
+		"categoryLabels": {
+			"nose": "Burun",
+			"ear": "Quloq",
+			"throat": "Tomoq",
+			"allergy": "Allergiya",
+			"kids": "Bolalar"
+		},
+		"watchOnYoutube": "YouTube'da ko'rish",
+		"empty": "Hozircha bu bo'limda video yo'q."
 	},
 	"hero": {
 		"slides": {
@@ -161,13 +192,13 @@
 		},
 		"phone": {
 			"title": "Telefon",
-			"info": "+998 97 730 86 85",
+			"info": "+998 90 325 86 00",
 			"subInfo": "",
 			"linkText": "QO'NG'IROQ QILISH"
 		},
 		"telegram": {
 			"title": "Telegram",
-			"info": "+998 97 730 86 85",
+			"info": "+998 90 325 86 00",
 			"subInfo": "Telegram orqali bog'laning",
 			"linkText": "TELEGRAM ORQALI BOG'LANISH"
 		}

@@ -5,8 +5,39 @@
 			"home": "Главная",
 			"services": "Услуги",
 			"about": "О нас",
-			"contact": "Контакты"
+			"contact": "Контакты",
+			"videos": "Видео"
 		}
+	},
+	"videoPage": {
+		"hero": {
+			"pretitle": "ВИДЕОМАТЕРИАЛЫ",
+			"title": "Полезные видео по заболеваниям",
+			"breadcrumbHome": "Главная",
+			"breadcrumbCurrent": "Видео"
+		},
+		"section": {
+			"pretitle": "КАТЕГОРИИ",
+			"title": "Выберите нужную тему",
+			"description": "Смотрите видео с YouTube, отсортированные по заболеваниям и темам."
+		},
+		"categories": {
+			"all": "Все",
+			"nose": "Нос",
+			"ear": "Ухо",
+			"throat": "Горло",
+			"allergy": "Аллергия",
+			"kids": "Дети"
+		},
+		"categoryLabels": {
+			"nose": "Нос",
+			"ear": "Ухо",
+			"throat": "Горло",
+			"allergy": "Аллергия",
+			"kids": "Дети"
+		},
+		"watchOnYoutube": "Смотреть на YouTube",
+		"empty": "В этом разделе пока нет видео."
 	},
 	"hero": {
 		"slides": {
@@ -161,13 +192,13 @@
 		},
 		"phone": {
 			"title": "Телефон",
-			"info": "+998 97 730 86 85",
+			"info": "+998 90 325 86 00",
 			"subInfo": "",
 			"linkText": "ПОЗВОНИТЬ"
 		},
 		"telegram": {
 			"title": "Telegram",
-			"info": "+998 97 730 86 85",
+			"info": "+998 90 325 86 00",
 			"subInfo": "Свяжитесь с нами в Telegram",
 			"linkText": "НАПИСАТЬ В TELEGRAM"
 		}
