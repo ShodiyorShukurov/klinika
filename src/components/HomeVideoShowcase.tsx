@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 type LocalizedTitle = {
 	uz: string
+	'uz-Cyrl': string
 	ru: string
 	en: string
 }
@@ -18,6 +19,7 @@ const previewVideos: PreviewVideo[] = [
 		videoUrl: 'https://youtube.com/shorts/AFGAy55lT54?si=1neBdKqAhm09OG9X',
 		title: {
 			uz: 'Nafas olishi 100% tiklangan bemor',
+			'uz-Cyrl': 'Нафас олиши 100% тикланган бемор',
 			ru: 'Пациент с полностью восстановленным дыханием',
 			en: 'Patient with fully restored breathing',
 		},
@@ -26,6 +28,7 @@ const previewVideos: PreviewVideo[] = [
 		videoUrl: 'https://youtube.com/shorts/UOsuyVqep-U?si=bos1ZgeDSdYiF3Pf',
 		title: {
 			uz: 'Erkin nafas olishni tiklagan bemor',
+			'uz-Cyrl': 'Эркин нафас олишни тиклаган бемор',
 			ru: 'Пациент с восстановленным свободным дыханием',
 			en: 'Patient with restored free breathing',
 		},
@@ -34,6 +37,7 @@ const previewVideos: PreviewVideo[] = [
 		videoUrl: 'https://youtube.com/shorts/rtsl2PlkxRg?si=38OA0dZXi0dDc9OV',
 		title: {
 			uz: "Nafas olishi yaxshi tiklangan bemor",
+			'uz-Cyrl': 'Нафас олиши яхши тикланган бемор',
 			ru: 'Пациент с отличным восстановлением дыхания',
 			en: 'Patient with excellent breathing recovery',
 		},
@@ -42,6 +46,7 @@ const previewVideos: PreviewVideo[] = [
 		videoUrl: 'https://youtube.com/shorts/KUN8Zn9Z2jw?si=z7Fs1D_e7HEFCCNx',
 		title: {
 			uz: 'Burun operatsiyasidan keyingi natija',
+			'uz-Cyrl': 'Бурун операциясидан кейинги натижа',
 			ru: 'Результат после операции на носу',
 			en: 'Result after nose surgery',
 		},
@@ -50,6 +55,7 @@ const previewVideos: PreviewVideo[] = [
 		videoUrl: 'https://youtube.com/shorts/pzMCU1N_nPI?si=KqTS5GtuJMZf2m4y',
 		title: {
 			uz: '5 yoshli bolada quloq muammosi',
+			'uz-Cyrl': '5 ёшли болада қулоқ муаммоси',
 			ru: 'Проблема с ухом у 5-летнего ребенка',
 			en: 'Ear condition in a 5-year-old child',
 		},
@@ -58,6 +64,7 @@ const previewVideos: PreviewVideo[] = [
 		videoUrl: 'https://youtube.com/shorts/5Vozb6KczuA?si=xTnstBIMkR5sxSul',
 		title: {
 			uz: 'Quloq davolashdan keyingi natija',
+			'uz-Cyrl': 'Қулоқ даволашдан кейинги натижа',
 			ru: 'Результат после лечения уха',
 			en: 'Result after ear treatment',
 		},
@@ -94,10 +101,11 @@ const extractYouTubeId = (videoUrl: string): string | null => {
 	return null
 }
 
-const normalizeLang = (value: string): 'uz' | 'ru' | 'en' => {
-	if (value === 'uz' || value === 'ru' || value === 'en') {
+const normalizeLang = (value: string): 'uz' | 'uz-Cyrl' | 'ru' | 'en' => {
+	if (value === 'uz' || value === 'uz-Cyrl' || value === 'ru' || value === 'en') {
 		return value
 	}
+	if (value === 'uz-cyrl') return 'uz-Cyrl'
 	return 'uz'
 }
 

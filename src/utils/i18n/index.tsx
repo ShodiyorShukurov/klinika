@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next'
 import en from './locals/en.json'
 import ru from './locals/ru.json'
 import uz from './locals/uz.json'
+import uzCyrl from './locals/uz-cyrl.json'
 
 const resources = {
 	en: {
@@ -10,6 +11,9 @@ const resources = {
 	},
 	uz: {
 		translation: uz,
+	},
+	'uz-Cyrl': {
+		translation: uzCyrl,
 	},
 	ru: {
 		translation: ru,

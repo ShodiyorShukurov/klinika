@@ -6,6 +6,7 @@ import VideoCard from '../components/Video/VideoCard'
 
 type LocalizedTitle = {
 	uz: string
+	'uz-Cyrl': string
 	ru: string
 	en: string
 }
@@ -21,6 +22,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/AFGAy55lT54?si=1neBdKqAhm09OG9X',
 		title: {
 			uz: 'Nafas olishi 100% tiklangan bemor',
+			'uz-Cyrl': 'Нафас олиши 100% тикланган бемор',
 			ru: 'Пациент с полностью восстановленным дыханием',
 			en: 'Patient with fully restored breathing',
 		},
@@ -30,6 +32,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/UOsuyVqep-U?si=bos1ZgeDSdYiF3Pf',
 		title: {
 			uz: 'Erkin nafas olishni tiklagan bemor',
+			'uz-Cyrl': 'Эркин нафас олишни тиклаган бемор',
 			ru: 'Пациент с восстановленным свободным дыханием',
 			en: 'Patient with restored free breathing',
 		},
@@ -39,6 +42,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/rtsl2PlkxRg?si=38OA0dZXi0dDc9OV',
 		title: {
 			uz: 'Nafas olishi yaxshi tiklangan bemor',
+			'uz-Cyrl': 'Нафас олиши яхши тикланган бемор',
 			ru: 'Пациент с отличным восстановлением дыхания',
 			en: 'Patient with excellent breathing recovery',
 		},
@@ -48,6 +52,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/7Qb7FKtRjRM?si=Uef5vRKaIA12JLE1',
 		title: {
 			uz: 'Spreylardan xalos bo`lgan bemor',
+			'uz-Cyrl': 'Спрейлардан халос бўлган бемор',
 			ru: 'Пациент, отказавшийся от спреев',
 			en: 'Patient no longer dependent on sprays',
 		},
@@ -57,6 +62,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/KUN8Zn9Z2jw?si=z7Fs1D_e7HEFCCNx',
 		title: {
 			uz: 'Burun operatsiyasidan keyingi natija',
+			'uz-Cyrl': 'Бурун операциясидан кейинги натижа',
 			ru: 'Результат после операции на носу',
 			en: 'Result after nose surgery',
 		},
@@ -66,6 +72,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/pzMCU1N_nPI?si=KqTS5GtuJMZf2m4y',
 		title: {
 			uz: '5 yoshli bolada quloq muammosi',
+			'uz-Cyrl': '5 ёшли болада қулоқ муаммоси',
 			ru: 'Проблема с ухом у 5-летнего ребенка',
 			en: 'Ear condition in a 5-year-old child',
 		},
@@ -75,6 +82,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/5Vozb6KczuA?si=xTnstBIMkR5sxSul',
 		title: {
 			uz: 'Quloq davolashdan keyingi natija',
+			'uz-Cyrl': 'Қулоқ даволашдан кейинги натижа',
 			ru: 'Результат после лечения уха',
 			en: 'Result after ear treatment',
 		},
@@ -84,6 +92,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/KaoE4D067BI?si=_qo1V0afbc8kCw2j',
 		title: {
 			uz: 'Eshitishdagi muammo bartaraf etildi',
+			'uz-Cyrl': 'Эшитишдаги муаммо бартараф этилди',
 			ru: 'Проблема со слухом устранена',
 			en: 'Hearing issue resolved',
 		},
@@ -93,6 +102,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/xeG49cmv5Wo?si=B4OcNwlqFq5QzZAo',
 		title: {
 			uz: 'Operatsiyadan keyin eshitish tiklandi',
+			'uz-Cyrl': 'Операциядан кейин эшитиш тикланди',
 			ru: 'Слух восстановлен после операции',
 			en: 'Hearing restored after surgery',
 		},
@@ -102,6 +112,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/ScpJU7sjI7M?si=92MejFnxB6YpFeXC',
 		title: {
 			uz: 'Bolada eshitmaslik muammosi davolandi',
+			'uz-Cyrl': 'Болада эшитмаслик муаммоси даволанди',
 			ru: 'У ребенка устранена проблема со слухом',
 			en: 'Child hearing issue treated',
 		},
@@ -111,6 +122,7 @@ const videos: VideoItem[] = [
 		videoUrl: 'https://youtube.com/shorts/xvde33jR7RQ?si=Uq_txAvFfT1rXrMA',
 		title: {
 			uz: 'Quloqqa suniy suyakcha qoyish jarayoni',
+			'uz-Cyrl': 'Қулоққа сунъий суякча қўйиш жараёни',
 			ru: 'Процесс установки искусственной слуховой косточки',
 			en: 'Artificial ossicle placement process',
 		},
@@ -132,10 +144,11 @@ const categories = [
 	'gaymorit',
 ] as const
 
-const normalizeLang = (value: string): 'uz' | 'ru' | 'en' => {
-	if (value === 'uz' || value === 'ru' || value === 'en') {
+const normalizeLang = (value: string): 'uz' | 'uz-Cyrl' | 'ru' | 'en' => {
+	if (value === 'uz' || value === 'uz-Cyrl' || value === 'ru' || value === 'en') {
 		return value
 	}
+	if (value === 'uz-cyrl') return 'uz-Cyrl'
 	return 'uz'
 }
 

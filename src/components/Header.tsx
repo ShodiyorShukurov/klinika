@@ -6,13 +6,17 @@ import { NavLink } from 'react-router-dom'
 const Header: React.FC = () => {
 	const { i18n, t } = useTranslation()
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
-	const normalizeLanguage = (value: string | null): 'uz' | 'ru' | 'en' => {
-		if (value === 'uz' || value === 'ru' || value === 'en') {
+	type LanguageCode = 'uz' | 'uz-Cyrl' | 'ru' | 'en'
+	const normalizeLanguage = (value: string | null): LanguageCode => {
+		if (value === 'uz' || value === 'uz-Cyrl' || value === 'ru' || value === 'en') {
 			return value
+		}
+		if (value === 'uz-cyrl') {
+			return 'uz-Cyrl'
 		}
 		return 'uz'
 	}
-	const [language, setLanguage] = useState<'uz' | 'ru' | 'en'>(() =>
+	const [language, setLanguage] = useState<LanguageCode>(() =>
 		normalizeLanguage(sessionStorage.getItem('i18nextLng') || i18n.language)
 	)
 
@@ -28,7 +32,7 @@ const Header: React.FC = () => {
 		}
 	}, [i18n])
 
-	const changeLanguage = (lng: 'uz' | 'ru' | 'en') => {
+	const changeLanguage = (lng: LanguageCode) => {
 		setLanguage(lng)
 		sessionStorage.setItem('i18nextLng', lng)
 		i18n.changeLanguage(lng)
@@ -164,6 +168,19 @@ const Header: React.FC = () => {
 									</button>
 									<button
 										type='button'
+										onClick={() => changeLanguage('uz-Cyrl')}
+										aria-pressed={language === 'uz-Cyrl'}
+										className={`rounded-full px-2 py-0.5 transition-colors ${
+											language === 'uz-Cyrl'
+												? 'bg-[#0c5adb] text-white'
+												: 'text-[#041424] hover:text-[#0c5adb]'
+										}`}
+										aria-label='Switch language to Uzbek Cyrillic'
+									>
+										Ўз
+									</button>
+									<button
+										type='button'
 										onClick={() => changeLanguage('ru')}
 										aria-pressed={language === 'ru'}
 										className={`rounded-full px-2 py-0.5 transition-colors ${
@@ -227,6 +244,18 @@ const Header: React.FC = () => {
 											}`}
 										>
 											UZ
+										</button>
+										<button
+											type='button'
+											onClick={() => changeLanguage('uz-Cyrl')}
+											aria-pressed={language === 'uz-Cyrl'}
+											className={`rounded-full px-2 py-0.5 transition-colors ${
+												language === 'uz-Cyrl'
+													? 'bg-[#0c5adb] text-white'
+													: 'text-[#041424] hover:text-[#0c5adb]'
+											}`}
+										>
+											UZ-CYR
 										</button>
 										<button
 											type='button'
