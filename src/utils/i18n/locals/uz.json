@@ -25,19 +25,34 @@
 			"all": "Barchasi",
 			"nose": "Burun",
 			"ear": "Quloq",
-			"throat": "Tomoq",
-			"allergy": "Allergiya",
-			"kids": "Bolalar"
+			"bemor_fikri": "Bemor fikri",
+			"barotravma": "Barotravma",
+			"renoseptoplastika": "Renoseptoplastika",
+			"tonzillektomiya": "Tonzillektomiya",
+			"timpanoplastika": "Timpanoplastika",
+			"adenotomiya": "Adenotomiya",
+			"adenoid": "Adenoid",
+			"gaymorit": "Gaymorit"
 		},
 		"categoryLabels": {
 			"nose": "Burun",
 			"ear": "Quloq",
-			"throat": "Tomoq",
-			"allergy": "Allergiya",
-			"kids": "Bolalar"
+			"bemor_fikri": "Bemor fikri",
+			"barotravma": "Barotravma",
+			"renoseptoplastika": "Renoseptoplastika",
+			"tonzillektomiya": "Tonzillektomiya",
+			"timpanoplastika": "Timpanoplastika",
+			"adenotomiya": "Adenotomiya",
+			"adenoid": "Adenoid",
+			"gaymorit": "Gaymorit"
 		},
 		"watchOnYoutube": "YouTube'da ko'rish",
 		"empty": "Hozircha bu bo'limda video yo'q."
+	},
+	"homeVideos": {
+		"pretitle": "VIDEO NAMUNALAR",
+		"title": "Bemorlar bo'yicha so'nggi videolar",
+		"viewAll": "Hammasini ko'rish"
 	},
 	"hero": {
 		"slides": {

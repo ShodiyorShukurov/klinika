@@ -25,16 +25,26 @@
 			"all": "Все",
 			"nose": "Нос",
 			"ear": "Ухо",
-			"throat": "Горло",
-			"allergy": "Аллергия",
-			"kids": "Дети"
+			"bemor_fikri": "Мнение пациента",
+			"barotravma": "Баротравма",
+			"renoseptoplastika": "Риносептопластика",
+			"tonzillektomiya": "Тонзиллэктомия",
+			"timpanoplastika": "Тимпанопластика",
+			"adenotomiya": "Аденотомия",
+			"adenoid": "Аденоид",
+			"gaymorit": "Гайморит"
 		},
 		"categoryLabels": {
 			"nose": "Нос",
 			"ear": "Ухо",
-			"throat": "Горло",
-			"allergy": "Аллергия",
-			"kids": "Дети"
+			"bemor_fikri": "Мнение пациента",
+			"barotravma": "Баротравма",
+			"renoseptoplastika": "Риносептопластика",
+			"tonzillektomiya": "Тонзиллэктомия",
+			"timpanoplastika": "Тимпанопластика",
+			"adenotomiya": "Аденотомия",
+			"adenoid": "Аденоид",
+			"gaymorit": "Гайморит"
 		},
 		"watchOnYoutube": "Смотреть на YouTube",
 		"empty": "В этом разделе пока нет видео."

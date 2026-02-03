@@ -4,90 +4,166 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import VideoCard from '../components/Video/VideoCard'
 
+type LocalizedTitle = {
+	uz: string
+	ru: string
+	en: string
+}
+
 type VideoItem = {
-	id: string
-	title: string
-	category: 'nose' | 'ear' | 'throat' | 'allergy' | 'kids'
-	description: string
-	duration: string
+	videoUrl: string
+	title: LocalizedTitle
+	category: string
+}
+
+const videos: VideoItem[] = [
+	{
+		videoUrl: 'https://youtube.com/shorts/AFGAy55lT54?si=1neBdKqAhm09OG9X',
+		title: {
+			uz: 'Nafas olishi 100% tiklangan bemor',
+			ru: 'Пациент с полностью восстановленным дыханием',
+			en: 'Patient with fully restored breathing',
+		},
+		category: 'nose',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/UOsuyVqep-U?si=bos1ZgeDSdYiF3Pf',
+		title: {
+			uz: 'Erkin nafas olishni tiklagan bemor',
+			ru: 'Пациент с восстановленным свободным дыханием',
+			en: 'Patient with restored free breathing',
+		},
+		category: 'nose',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/rtsl2PlkxRg?si=38OA0dZXi0dDc9OV',
+		title: {
+			uz: 'Nafas olishi yaxshi tiklangan bemor',
+			ru: 'Пациент с отличным восстановлением дыхания',
+			en: 'Patient with excellent breathing recovery',
+		},
+		category: 'nose',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/7Qb7FKtRjRM?si=Uef5vRKaIA12JLE1',
+		title: {
+			uz: 'Spreylardan xalos bo`lgan bemor',
+			ru: 'Пациент, отказавшийся от спреев',
+			en: 'Patient no longer dependent on sprays',
+		},
+		category: 'nose',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/KUN8Zn9Z2jw?si=z7Fs1D_e7HEFCCNx',
+		title: {
+			uz: 'Burun operatsiyasidan keyingi natija',
+			ru: 'Результат после операции на носу',
+			en: 'Result after nose surgery',
+		},
+		category: 'nose',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/pzMCU1N_nPI?si=KqTS5GtuJMZf2m4y',
+		title: {
+			uz: '5 yoshli bolada quloq muammosi',
+			ru: 'Проблема с ухом у 5-летнего ребенка',
+			en: 'Ear condition in a 5-year-old child',
+		},
+		category: 'ear',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/5Vozb6KczuA?si=xTnstBIMkR5sxSul',
+		title: {
+			uz: 'Quloq davolashdan keyingi natija',
+			ru: 'Результат после лечения уха',
+			en: 'Result after ear treatment',
+		},
+		category: 'ear',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/KaoE4D067BI?si=_qo1V0afbc8kCw2j',
+		title: {
+			uz: 'Eshitishdagi muammo bartaraf etildi',
+			ru: 'Проблема со слухом устранена',
+			en: 'Hearing issue resolved',
+		},
+		category: 'ear',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/xeG49cmv5Wo?si=B4OcNwlqFq5QzZAo',
+		title: {
+			uz: 'Operatsiyadan keyin eshitish tiklandi',
+			ru: 'Слух восстановлен после операции',
+			en: 'Hearing restored after surgery',
+		},
+		category: 'ear',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/ScpJU7sjI7M?si=92MejFnxB6YpFeXC',
+		title: {
+			uz: 'Bolada eshitmaslik muammosi davolandi',
+			ru: 'У ребенка устранена проблема со слухом',
+			en: 'Child hearing issue treated',
+		},
+		category: 'ear',
+	},
+	{
+		videoUrl: 'https://youtube.com/shorts/xvde33jR7RQ?si=Uq_txAvFfT1rXrMA',
+		title: {
+			uz: 'Quloqqa suniy suyakcha qoyish jarayoni',
+			ru: 'Процесс установки искусственной слуховой косточки',
+			en: 'Artificial ossicle placement process',
+		},
+		category: 'ear',
+	},
+]
+
+const categories = [
+	'all',
+	'nose',
+	'ear',
+	'bemor_fikri',
+	'barotravma',
+	'renoseptoplastika',
+	'tonzillektomiya',
+	'timpanoplastika',
+	'adenotomiya',
+	'adenoid',
+	'gaymorit',
+] as const
+
+const normalizeLang = (value: string): 'uz' | 'ru' | 'en' => {
+	if (value === 'uz' || value === 'ru' || value === 'en') {
+		return value
+	}
+	return 'uz'
 }
 
 const VideoPage = () => {
-	const { t } = useTranslation()
-	const [activeCategory, setActiveCategory] = useState<
-		'all' | VideoItem['category']
-	>('all')
+	const { t, i18n } = useTranslation()
+	const [activeCategory, setActiveCategory] = useState<string>('all')
 
-	const videos: VideoItem[] = [
-		{
-			id: 'https://youtube.com/shorts/AFGAy55lT54?si=1neBdKqAhm09OG9X',
-			title: "Burun bitishi: sabablar va uy sharoitida yengillik",
-			category: 'nose',
-			description:
-				"Burun bitishi va nafas olish qiyinlashganda dastlabki yordam bo'yicha tavsiyalar.",
-			duration: '6:12',
-		},
-		{
-			id: 'k3iYd1Oj1Ak',
-			title: "Burun poliplari: belgilari va davolash yo'llari",
-			category: 'nose',
-			description:
-				"Poliplar qachon xavfli bo'ladi va endoskopik davolash haqida qisqacha.",
-			duration: '8:40',
-		},
-		{
-			id: 'V1Plm_5fA2o',
-			title: "Quloq og'rig'i: qachon shifokorga murojaat qilish kerak?",
-			category: 'ear',
-			description:
-				"Otit, og'riq, shovqin va eshitish pasayishi bo'lsa nima qilish kerak.",
-			duration: '7:18',
-		},
-		{
-			id: 'b4xS5gXc2Mk',
-			title: "Tomoq yallig'lanishi: angina va faringit farqi",
-			category: 'throat',
-			description:
-				"Antibiotiklar qachon kerak va qachon shart emasligi haqida.",
-			duration: '5:52',
-		},
-		{
-			id: 'y6N7q9Fh0Qs',
-			title: 'Allergik rinit: mavsumiy va doimiy shakllar',
-			category: 'allergy',
-			description:
-				"Allergiyaga bog'liq burun oqishi va aksirishning oldini olish usullari.",
-			duration: '9:05',
-		},
-		{
-			id: 'J8d0kq9mYbQ',
-			title: "Bolalarda LOR muammolari: tez-tez uchraydigan holatlar",
-			category: 'kids',
-			description:
-				"Bolalarda adenoid, quloq yallig'lanishi va doimiy shamollash haqida.",
-			duration: '10:14',
-		},
-	]
+	const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language)
 
-	const categories = [
-		{ key: 'all', label: t('videoPage.categories.all') },
-		{ key: 'nose', label: t('videoPage.categories.nose') },
-		{ key: 'ear', label: t('videoPage.categories.ear') },
-		{ key: 'throat', label: t('videoPage.categories.throat') },
-		{ key: 'allergy', label: t('videoPage.categories.allergy') },
-		{ key: 'kids', label: t('videoPage.categories.kids') },
-		{ key: 'kids', label: t('videoPage.categories.kids') },
-		{ key: 'kids', label: t('videoPage.categories.kids') },
-		{ key: 'kids', label: t('videoPage.categories.kids') },
-		{ key: 'kids', label: t('videoPage.categories.kids') },
-	] as const
+	const getVideoTitle = (video: VideoItem, index: number) =>
+		video.title[currentLang]?.trim() ||
+		`${t('videoPage.fallback.title', { defaultValue: 'Bemor holati' })} #${index + 1}`
+
+	const categoryOptions = useMemo(
+		() =>
+			categories.map((key) => ({
+				key,
+				label: t(`videoPage.categories.${key}`, { defaultValue: key }),
+			})),
+		[t]
+	)
 
 	const filteredVideos = useMemo(() => {
 		if (activeCategory === 'all') {
 			return videos
 		}
 		return videos.filter((video) => video.category === activeCategory)
-	}, [activeCategory, videos])
+	}, [activeCategory])
 
 	return (
 		<>
@@ -102,9 +178,9 @@ const VideoPage = () => {
 					<span className='uppercase tracking-[0.3em] text-sm'>
 						{t('videoPage.hero.pretitle')}
 					</span>
-					<h1 className='text-4xl md:text-5xl font-bold mt-4'>
+					<h2 className='text-4xl md:text-5xl font-bold mt-4'>
 						{t('videoPage.hero.title')}
-					</h1>
+					</h2>
 					<div className='flex justify-center items-center gap-2 text-lg mt-3'>
 						<span>{t('videoPage.hero.breadcrumbHome')}</span>
 						<span className='font-bold'>&gt;</span>
@@ -129,13 +205,11 @@ const VideoPage = () => {
 						</div>
 						<div className='-mx-2 px-2 overflow-x-auto lg:overflow-visible'>
 							<div className='flex gap-3 min-w-max lg:flex-wrap lg:min-w-0'>
-								{categories.map((category) => (
+								{categoryOptions.map((category) => (
 									<button
 										key={category.key}
 										type='button'
-										onClick={() =>
-											setActiveCategory(category.key as typeof activeCategory)
-										}
+										onClick={() => setActiveCategory(category.key)}
 										className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
 											activeCategory === category.key
 												? 'bg-[#0c5adb] text-white shadow-md'
@@ -149,15 +223,15 @@ const VideoPage = () => {
 						</div>
 					</div>
 
-					<div className='mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-						{filteredVideos.map((video) => (
+					<div className='mt-10 grid gap-8 sm:grid-cols-2 xl:grid-cols-4'>
+						{filteredVideos.map((video, index) => (
 							<VideoCard
-								key={video.id}
-								id={video.id}
-								title={video.title}
-								description={video.description}
-								duration={video.duration}
-								categoryLabel={t(`videoPage.categoryLabels.${video.category}`)}
+								key={video.videoUrl}
+								videoUrl={video.videoUrl}
+								title={getVideoTitle(video, index)}
+								categoryLabel={t(`videoPage.categoryLabels.${video.category}`, {
+									defaultValue: video.category,
+								})}
 								watchLabel={t('videoPage.watchOnYoutube')}
 							/>
 						))}

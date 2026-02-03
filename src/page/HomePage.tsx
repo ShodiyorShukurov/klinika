@@ -3,6 +3,7 @@ import CaseStudiesCarousel from '../components/CaseStudiesCarousel'
 import ContactSection from '../components/ContactSection'
 import Header from '../components/Header'
 import HeroCarousel from '../components/HeroCarousel'
+import HomeVideoShowcase from '../components/HomeVideoShowcase'
 import LabProductSection from '../components/LabProductSection'
 import Services from '../components/Services'
 // import Testimonials from '../components/Testimonials'
@@ -14,6 +15,7 @@ const HomePage = () => {
 			<Header />
 			<HeroCarousel />
 			<About />
+			<HomeVideoShowcase />
 			<LabProductSection />
 			<Services />
 			<CaseStudiesCarousel />

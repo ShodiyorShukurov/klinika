@@ -25,19 +25,34 @@
 			"all": "All",
 			"nose": "Nose",
 			"ear": "Ear",
-			"throat": "Throat",
-			"allergy": "Allergy",
-			"kids": "Kids"
+			"bemor_fikri": "Patient Opinion",
+			"barotravma": "Barotrauma",
+			"renoseptoplastika": "Rhinoseptoplasty",
+			"tonzillektomiya": "Tonsillectomy",
+			"timpanoplastika": "Tympanoplasty",
+			"adenotomiya": "Adenotomy",
+			"adenoid": "Adenoid",
+			"gaymorit": "Sinusitis"
 		},
 		"categoryLabels": {
 			"nose": "Nose",
 			"ear": "Ear",
-			"throat": "Throat",
-			"allergy": "Allergy",
-			"kids": "Kids"
+			"bemor_fikri": "Patient Opinion",
+			"barotravma": "Barotrauma",
+			"renoseptoplastika": "Rhinoseptoplasty",
+			"tonzillektomiya": "Tonsillectomy",
+			"timpanoplastika": "Tympanoplasty",
+			"adenotomiya": "Adenotomy",
+			"adenoid": "Adenoid",
+			"gaymorit": "Sinusitis"
 		},
 		"watchOnYoutube": "Watch on YouTube",
 		"empty": "No videos in this category yet."
+	},
+	"homeVideos": {
+		"pretitle": "VIDEO HIGHLIGHTS",
+		"title": "Latest patient video cases",
+		"viewAll": "View all videos"
 	},
 	"hero": {
 		"slides": {
