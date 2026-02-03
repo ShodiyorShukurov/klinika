@@ -45,12 +45,20 @@ const Header: React.FC = () => {
 		setIsLangMenuOpen(false)
 	}
 
-	const mobileLangLabel: Record<LanguageCode, string> = {
-		uz: 'UZ',
-		'uz-Cyrl': 'Ўз',
-		ru: 'RU',
-		en: 'EN',
-	}
+	const languageOptions: Array<{
+		code: LanguageCode
+		short: string
+		label: string
+		flag: string
+	}> = [
+		{ code: 'uz', short: 'Uz', label: "O'zbek", flag: '🇺🇿' },
+		{ code: 'uz-Cyrl', short: 'Ўз', label: 'Ўзбек', flag: '🇺🇿' },
+		{ code: 'ru', short: 'Ru', label: 'Русский', flag: '🇷🇺' },
+		{ code: 'en', short: 'En', label: 'English', flag: '🇺🇸' },
+	]
+
+	const activeMobileLanguage =
+		languageOptions.find((option) => option.code === language) || languageOptions[0]
 
 	return (
 		<header>
@@ -174,7 +182,7 @@ const Header: React.FC = () => {
 										}`}
 										aria-label='Switch language to Uzbek'
 									>
-										UZ
+										<span className='mr-1'>🇺🇿</span>UZ
 									</button>
 									<button
 										type='button'
@@ -187,7 +195,7 @@ const Header: React.FC = () => {
 										}`}
 										aria-label='Switch language to Uzbek Cyrillic'
 									>
-										Ўз
+										<span className='mr-1'>🇺🇿</span>Ўз
 									</button>
 									<button
 										type='button'
@@ -200,7 +208,7 @@ const Header: React.FC = () => {
 										}`}
 										aria-label='Switch language to Russian'
 									>
-										RU
+										<span className='mr-1'>🇷🇺</span>RU
 									</button>
 									<button
 										type='button'
@@ -213,7 +221,7 @@ const Header: React.FC = () => {
 										}`}
 										aria-label='Switch language to English'
 									>
-										EN
+										<span className='mr-1'>🇺🇸</span>EN
 									</button>
 								</div>
 							</div>
@@ -228,7 +236,8 @@ const Header: React.FC = () => {
 									aria-expanded={isLangMenuOpen}
 									aria-label='Open language menu'
 								>
-									{mobileLangLabel[language]}
+									<span>{activeMobileLanguage.flag}</span>
+									<span>{activeMobileLanguage.short}</span>
 									<ChevronDown
 										size={13}
 										className={`transition-transform duration-200 ${
@@ -238,7 +247,7 @@ const Header: React.FC = () => {
 								</button>
 
 								{isLangMenuOpen && (
-									<div className='absolute right-0 top-full z-30 mt-2 w-20 rounded-xl border border-[#d7e2f2] bg-white p-1 shadow-lg'>
+									<div className='absolute right-0 top-full z-30 mt-2 w-36 rounded-xl border border-[#d7e2f2] bg-white p-1 shadow-lg'>
 										<button
 											type='button'
 											onClick={() => changeLanguage('uz')}
@@ -248,7 +257,7 @@ const Header: React.FC = () => {
 													: 'text-[#041424] hover:bg-[#f4f8ff]'
 											}`}
 										>
-											UZ
+											🇺🇿 O'zbek
 										</button>
 										<button
 											type='button'
@@ -259,7 +268,7 @@ const Header: React.FC = () => {
 													: 'text-[#041424] hover:bg-[#f4f8ff]'
 											}`}
 										>
-											Ўз
+											🇺🇿 Ўзбек
 										</button>
 										<button
 											type='button'
@@ -270,7 +279,7 @@ const Header: React.FC = () => {
 													: 'text-[#041424] hover:bg-[#f4f8ff]'
 											}`}
 										>
-											RU
+											🇷🇺 Русский
 										</button>
 										<button
 											type='button'
@@ -281,7 +290,7 @@ const Header: React.FC = () => {
 													: 'text-[#041424] hover:bg-[#f4f8ff]'
 											}`}
 										>
-											EN
+											🇺🇸 English
 										</button>
 									</div>
 								)}
