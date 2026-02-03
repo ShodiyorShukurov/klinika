@@ -42,7 +42,7 @@ const parseYoutubeVideo = (
 			if (parsed.pathname.startsWith('/embed/')) {
 				return {
 					id: parsed.pathname.split('/').filter(Boolean)[1] ?? null,
-					iwsShort: false,
+					isShort: false,
 				}
 			}
 		}
