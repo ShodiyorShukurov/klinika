@@ -1,4 +1,4 @@
-import { Instagram, MapPin, Menu, X, Youtube } from 'lucide-react'
+import { ChevronDown, Instagram, MapPin, Menu, X, Youtube } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 const Header: React.FC = () => {
 	const { i18n, t } = useTranslation()
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
 	type LanguageCode = 'uz' | 'uz-Cyrl' | 'ru' | 'en'
 	const normalizeLanguage = (value: string | null): LanguageCode => {
 		if (value === 'uz' || value === 'uz-Cyrl' || value === 'ru' || value === 'en') {
@@ -36,10 +37,19 @@ const Header: React.FC = () => {
 		setLanguage(lng)
 		sessionStorage.setItem('i18nextLng', lng)
 		i18n.changeLanguage(lng)
+		setIsLangMenuOpen(false)
 	}
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
+		setIsLangMenuOpen(false)
+	}
+
+	const mobileLangLabel: Record<LanguageCode, string> = {
+		uz: 'UZ',
+		'uz-Cyrl': 'Ўз',
+		ru: 'RU',
+		en: 'EN',
 	}
 
 	return (
@@ -68,7 +78,7 @@ const Header: React.FC = () => {
 							</a>
 						</div>
 
-						<div className='flex items-center gap-6'>
+						<div className='flex items-center gap-3 sm:gap-6'>
 							<div className='flex items-center gap-2'>
 								<MapPin size={16} className='text-[#0c5adb]' />
 								<span className='hidden sm:inline text-[16px] font-medium'>
@@ -208,6 +218,75 @@ const Header: React.FC = () => {
 								</div>
 							</div>
 
+							{/* Mobile language switch (compact dropdown style) */}
+							<div className='relative lg:hidden'>
+								<button
+									type='button'
+									onClick={() => setIsLangMenuOpen((prev) => !prev)}
+									className='flex items-center gap-1 rounded-xl border border-[#d7e2f2] bg-[#f4f8ff] px-3 py-2 text-[11px] font-semibold text-[#041424] shadow-sm'
+									aria-haspopup='menu'
+									aria-expanded={isLangMenuOpen}
+									aria-label='Open language menu'
+								>
+									{mobileLangLabel[language]}
+									<ChevronDown
+										size={13}
+										className={`transition-transform duration-200 ${
+											isLangMenuOpen ? 'rotate-180' : 'rotate-0'
+										}`}
+									/>
+								</button>
+
+								{isLangMenuOpen && (
+									<div className='absolute right-0 top-full z-30 mt-2 w-20 rounded-xl border border-[#d7e2f2] bg-white p-1 shadow-lg'>
+										<button
+											type='button'
+											onClick={() => changeLanguage('uz')}
+											className={`block w-full rounded-lg px-2 py-1.5 text-left text-[11px] font-semibold ${
+												language === 'uz'
+													? 'bg-[#0c5adb] text-white'
+													: 'text-[#041424] hover:bg-[#f4f8ff]'
+											}`}
+										>
+											UZ
+										</button>
+										<button
+											type='button'
+											onClick={() => changeLanguage('uz-Cyrl')}
+											className={`block w-full rounded-lg px-2 py-1.5 text-left text-[11px] font-semibold ${
+												language === 'uz-Cyrl'
+													? 'bg-[#0c5adb] text-white'
+													: 'text-[#041424] hover:bg-[#f4f8ff]'
+											}`}
+										>
+											Ўз
+										</button>
+										<button
+											type='button'
+											onClick={() => changeLanguage('ru')}
+											className={`block w-full rounded-lg px-2 py-1.5 text-left text-[11px] font-semibold ${
+												language === 'ru'
+													? 'bg-[#0c5adb] text-white'
+													: 'text-[#041424] hover:bg-[#f4f8ff]'
+											}`}
+										>
+											RU
+										</button>
+										<button
+											type='button'
+											onClick={() => changeLanguage('en')}
+											className={`block w-full rounded-lg px-2 py-1.5 text-left text-[11px] font-semibold ${
+												language === 'en'
+													? 'bg-[#0c5adb] text-white'
+													: 'text-[#041424] hover:bg-[#f4f8ff]'
+											}`}
+										>
+											EN
+										</button>
+									</div>
+								)}
+							</div>
+
 							{/* Burger menu button - Mobile */}
 							<button
 								onClick={toggleMenu}
@@ -231,58 +310,6 @@ const Header: React.FC = () => {
 					{isMenuOpen && (
 						<div className='lg:hidden border-t border-gray-200'>
 							<nav className='py-4'>
-								<div className='px-4 pb-4'>
-									<div className='flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 p-1 text-[13px] font-semibold uppercase w-fit'>
-										<button
-											type='button'
-											onClick={() => changeLanguage('uz')}
-											aria-pressed={language === 'uz'}
-											className={`rounded-full px-2 py-0.5 transition-colors ${
-												language === 'uz'
-													? 'bg-[#0c5adb] text-white'
-													: 'text-[#041424] hover:text-[#0c5adb]'
-											}`}
-										>
-											UZ
-										</button>
-										<button
-											type='button'
-											onClick={() => changeLanguage('uz-Cyrl')}
-											aria-pressed={language === 'uz-Cyrl'}
-											className={`rounded-full px-2 py-0.5 transition-colors ${
-												language === 'uz-Cyrl'
-													? 'bg-[#0c5adb] text-white'
-													: 'text-[#041424] hover:text-[#0c5adb]'
-											}`}
-										>
-											UZ-CYR
-										</button>
-										<button
-											type='button'
-											onClick={() => changeLanguage('ru')}
-											aria-pressed={language === 'ru'}
-											className={`rounded-full px-2 py-0.5 transition-colors ${
-												language === 'ru'
-													? 'bg-[#0c5adb] text-white'
-													: 'text-[#041424] hover:text-[#0c5adb]'
-											}`}
-										>
-											RU
-										</button>
-										<button
-											type='button'
-											onClick={() => changeLanguage('en')}
-											aria-pressed={language === 'en'}
-											className={`rounded-full px-2 py-0.5 transition-colors ${
-												language === 'en'
-													? 'bg-[#0c5adb] text-white'
-													: 'text-[#041424] hover:text-[#0c5adb]'
-											}`}
-										>
-											EN
-										</button>
-									</div>
-								</div>
 								<ul className='flex flex-col gap-4 text-[16px] font-medium text-[#041424] uppercase'>
 									<li>
 										<NavLink
