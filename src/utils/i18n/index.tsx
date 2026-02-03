@@ -22,7 +22,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
 	resources,
-	lng: sessionStorage.getItem('i18nextLng') || 'uz',
+	lng: sessionStorage.getItem('i18nextLng') || 'uz-Cyrl',
 	interpolation: {
 		escapeValue: false,
 	},

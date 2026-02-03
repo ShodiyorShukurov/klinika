@@ -149,7 +149,7 @@ const normalizeLang = (value: string): 'uz' | 'uz-Cyrl' | 'ru' | 'en' => {
 		return value
 	}
 	if (value === 'uz-cyrl') return 'uz-Cyrl'
-	return 'uz'
+	return 'uz-Cyrl'
 }
 
 const VideoPage = () => {

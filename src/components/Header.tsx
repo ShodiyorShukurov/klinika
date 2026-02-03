@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 		if (value === 'uz-cyrl') {
 			return 'uz-Cyrl'
 		}
-		return 'uz'
+		return 'uz-Cyrl'
 	}
 	const [language, setLanguage] = useState<LanguageCode>(() =>
 		normalizeLanguage(sessionStorage.getItem('i18nextLng') || i18n.language)

@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
 								</a>
 
 								<a
-									href='https://t.me/+998903258600'
+									href='https://t.me/Shavkat_lor'
 									aria-label='Telegram'
 									target='_blank'
 									className='w-10 h-10 rounded-full bg-white/95 flex items-center justify-center text-[#041926] hover:scale-105 transition'

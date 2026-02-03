@@ -32,7 +32,7 @@ const ContactInfoCards: React.FC = () => {
 			subInfo: t('contactInfo.telegram.subInfo'),
 			link: {
 				text: t('contactInfo.telegram.linkText'),
-				href: 'https://t.me/+998903258600',
+				href: 'https://t.me/Shavkat_lor',
 			},
 		},
 	]
