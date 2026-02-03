@@ -12,7 +12,7 @@ const ContactInfoCards: React.FC = () => {
 			subInfo: t('contactInfo.location.subInfo'),
 			link: {
 				text: t('contactInfo.location.linkText'),
-				href: '#map',
+				href: 'https://yandex.uz/maps/-/CPATIVlq',
 			},
 		},
 		{
@@ -57,6 +57,8 @@ const ContactInfoCards: React.FC = () => {
 							<a
 								href={item.link.href}
 								className='mt-4 text-blue-600 font-medium hover:underline flex items-center gap-2'
+								target='_blank'
+								rel='noopener noreferrer'
 							>
 								{item.link.text} <span>&rarr;</span>
 							</a>
